@@ -10,6 +10,8 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Home } from "./components/Home";
 import { Location } from "./components/Location";
+import { Login } from "./components/Login";
+import { Signup } from "./components/Signup";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,9 +24,9 @@ function App() {
     <BrowserRouter>
       <div className='App'>
 
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="" expand="lg">
           <Container>
-            <Navbar.Brand href="/">SMS</Navbar.Brand>
+            <Navbar.Brand href="/">Supermarket</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
@@ -33,8 +35,8 @@ function App() {
                 <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                 <Nav.Link as={Link} to="/location">Location</Nav.Link>
                 <NavDropdown title="Registration" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Sign up</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/login" className="dropdown-item">Login</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
 
                 </NavDropdown>
               </Nav>
@@ -47,6 +49,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/" element={<Home />} />
             <Route path="/location" element={<Location/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup/>} />
           </Routes>
         </div>
       </div>
