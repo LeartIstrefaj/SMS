@@ -1,11 +1,12 @@
-*{
+* {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&family=Roboto:wght@300;400;500&display=swap');
-  font-family: 'Montserrat' sans-serif;
+  font-family: 'Montserrat'sans-serif;
   color: white !important;
 
 }
-body{
+
+body {
   background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,26 +14,32 @@ body{
   height: 100vh;
   color: white !important;
 }
-.dropdown-item{
+
+.dropdown-item {
   color: black !important;
 }
-.dropdown-item:hover{
+
+.dropdown-item:hover {
   background-color: #b7b7a4 !important;
 }
-.links:hover{
+
+.links:hover {
   transition: .5s !important;
   color: #b7b7a4 !important;
 }
-.box-title{
+
+.box-title {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
 }
-.title{
+
+.title {
   font-size: 4rem;
 
 }
+
 /* .App {
   text-align: center;
   
@@ -69,6 +76,7 @@ body{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
