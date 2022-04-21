@@ -30,7 +30,7 @@ function App() {
             <Navbar.Brand href="/">Supermarket</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
+              <Nav className="ms-auto ">
                 <Nav.Link className='links' as={Link} to="/">Home</Nav.Link>
                 <Nav.Link className='links' as={Link} to="/about">About</Nav.Link>
                 <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link>
