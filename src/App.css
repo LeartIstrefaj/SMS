@@ -16,9 +16,22 @@ body{
 .dropdown-item{
   color: black !important;
 }
-.dropdown-item :link{
-  color: black !important;
-  background-color: gainsboro;
+.dropdown-item:hover{
+  background-color: #b7b7a4 !important;
+}
+.links:hover{
+  transition: .5s !important;
+  color: #b7b7a4 !important;
+}
+.box-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.title{
+  font-size: 4rem;
+
 }
 .App {
   text-align: center;

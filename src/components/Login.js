@@ -2,8 +2,8 @@ import React from "react";
 
 export const Login = () => {
     return (
-        <div>
-            <h3>Welcome to the Login Form</h3>
+        <div className="box-title">
+            <h3 className="title">Welcome to the Login Form</h3>
         </div>
     );
 }
