@@ -24,7 +24,6 @@ function App() {
 
     <BrowserRouter>
       <div className='App'>
-
         <Navbar bg="" expand="lg">
           <Container>
             <Navbar.Brand href="/">Supermarket</Navbar.Brand>
@@ -44,6 +43,7 @@ function App() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+
         <div>
           <Routes>
             <Route path="/about" element={<About />} />
@@ -54,8 +54,35 @@ function App() {
             <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
+
+
       </div>
+
+      <footer>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center ">
+              <div className="social-icon">
+                <a className='link-footer' id='social-media' href="http://facebook.com/" target="_blank"><i className='icon bx bxl-facebook-circle' ></i></a>
+                <a className='link-footer' href="https://www.instagram.com/" target="_blank"><i className=' icon bx bxl-instagram'></i></a>
+                <a className='link-footer' href="https://www.whatsapp.com/" target="_blank"><i className=' icon bx bxl-whatsapp' ></i></a>
+                <a className='link-footer' href="https://www.linkedin.com/" target="_blank"><i className=' icon bx bxl-linkedin' ></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+              <p id="footer-copy"><strong>Team SMS</strong> &copy; 2022 </p>
+            </div>
+          </div>
+        </div>
+
+      </footer>
     </BrowserRouter>
+
+
 
     // End Navbar Section
   );
