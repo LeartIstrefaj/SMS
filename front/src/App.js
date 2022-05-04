@@ -1,3 +1,4 @@
+import logo from './img/Logo.png';
 import './App.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import {
@@ -24,39 +25,39 @@ function App() {
 
     <BrowserRouter>
       <div className='App'>
-        <Navbar bg="" expand="lg">
-          <Container>
-            <Navbar.Brand href="/">Supermarket</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto ">
-                <Nav.Link className='links' as={Link} to="/">Home</Nav.Link>
-                <Nav.Link className='links' as={Link} to="/about">About</Nav.Link>
-                <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link>
-                <Nav.Link className='links' as={Link} to="/location">Location</Nav.Link>
-                <NavDropdown className='links' title="Registration" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={Link} to="/login" className="dropdown-item">Login</NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
+        <section className='banner-section'>
+          <Navbar bg="" expand="lg">
+            <Container>
+              <Navbar.Brand href="/">Supermarket<sup>MS</sup></Navbar.Brand>
+              <Navbar.Toggle id="toggle-design" aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto ">
+                  <Nav.Link className='links' as={Link} to="/">Home</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/about">About</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/location">Location</Nav.Link>
+                  <NavDropdown className='links' title="Registration" id="basic-nav-dropdown">
+                    <NavDropdown.Item as={Link} to="/login" className="dropdown-item">Login</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
 
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-
-        <div>
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/location" element={<Location />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
-        </div>
-
-
+                  </NavDropdown>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+          <div>
+            <Routes>
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/location" element={<Location />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+            </Routes>
+          </div>
+        </section>
       </div>
+
 
       <footer>
         <div className="container">

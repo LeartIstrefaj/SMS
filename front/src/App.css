@@ -4,8 +4,7 @@
   font-family: 'Montserrat' sans-serif;
   color: #fff !important;
 }
-
-body {
+.banner-section{
   background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +12,18 @@ body {
   height: 100vh;
   color: white !important;
 }
+.home-section{
+  color: #333 !important;
+  font-family: 'Montserrat' sans-serif;
+}
 
+body {
+  background-color: white !important;
+  
+}
+#toggle-design{
+  color: white !important;
+}
 .dropdown-item {
   color: black !important;
 }
@@ -41,9 +51,15 @@ body {
 footer{
   width: 100%;
 }
+footer p,
+      strong{
+  color: #333 !important;
+}
+ 
 .icon{
   font-size: 30px;
   padding: 7px;
+  color: #333 !important;
 }
 .icon:hover{
   color:#b7b7a4 !important;
