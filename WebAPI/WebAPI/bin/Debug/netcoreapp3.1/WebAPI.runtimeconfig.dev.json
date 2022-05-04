@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Learta\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Learta\\.nuget\\packages"
+    ]
+  }
+}
