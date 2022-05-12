@@ -107,4 +107,9 @@ footer p,
   to {
     transform: rotate(360deg);
   }
+  
+}
+
+.App {
+  text-align: center;
 }
