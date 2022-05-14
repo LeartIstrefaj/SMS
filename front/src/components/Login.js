@@ -39,7 +39,7 @@ export const Login = () => {
           </div>
 
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-success">
               Submit
             </button>
           </div>
