@@ -1,50 +1,55 @@
 import React from "react";
 
 export const Login = () => {
-    return (<form>
-        <h3>Sign In</h3>
+  return (
+    <div className="container box-2">
+      <div className="row d-flex justify-content-center align-items-center">
+        <form className="col-lg-6 col-md-6 col-sm-12">
+          <h3>Sign In</h3>
 
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Enter password"
-          />
-        </div>
-
-        <div className="mb-3">
-          <div className="custom-control custom-checkbox">
+          <div className="mb-3">
+            <label>Email address</label>
             <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
             />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
           </div>
-        </div>
 
-        <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </div>
-        <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
-        </p>
-      </form>
-    )
-    
+          <div className="mb-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+            />
+          </div>
+
+          <div className="mb-3">
+            <div className="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                className="custom-control-input"
+                id="customCheck1"
+              />
+              <label className="custom-control-label" htmlFor="customCheck1">
+                Remember me
+              </label>
+            </div>
+          </div>
+
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <p className="forgot-password text-right">
+            Forgot <a id="sign-in" href="#">password?</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  )
+
     ;
 }
