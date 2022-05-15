@@ -51,7 +51,7 @@ centered
                     <Form.Group controlId="CategoryName">
                         <Form.Label>CategoryName</Form.Label>
                         <Form.Control type="text" name="CategoryName" required 
-                        placeholder="CategoryName"/>
+                        placeholder="Category Name"/>
                     </Form.Group>
 
                     <Form.Group>

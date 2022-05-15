@@ -4,7 +4,8 @@
   font-family: 'Montserrat' sans-serif;
   color: #fff !important;
 }
-.banner-section{
+
+.banner-section {
   background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,19 +13,21 @@
   height: 100vh;
   color: white !important;
 }
-.home-section{
+
+.home-section {
   color: #333 !important;
   font-family: 'Montserrat' sans-serif;
 }
 
 body {
   background-color: white !important;
-  
+
 }
 
-#toggle-design{
+#toggle-design {
   color: white !important;
 }
+
 .dropdown-item {
   color: black !important;
 }
@@ -49,21 +52,24 @@ body {
   font-size: 1rem;
 
 }
-footer{
+
+footer {
   width: 100%;
 }
+
 footer p,
-      strong{
+strong {
   color: #333 !important;
 }
- 
-.icon{
+
+.icon {
   font-size: 30px;
   padding: 7px;
   color: #333 !important;
 }
-.icon:hover{
-  color:#b7b7a4 !important;
+
+.icon:hover {
+  color: #b7b7a4 !important;
   transition: 1s;
   transform: rotate(360deg);
   /* transform: scale(1.2); */
@@ -105,30 +111,36 @@ footer p,
   }
 }
 
-form > a{
+form>a {
   color: black !important;
 }
 
-.box{
+.box {
   width: 60% !important;
   background-color: gainsboro;
   border-radius: 10px;
-  padding-top:5px !important;
-  padding-bottom:5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
-.box  a,h3,label,input,p {
+
+.box a,
+h3,
+label,
+input,
+p {
   color: black !important;
 }
-#sign-in{
+
+#sign-in {
   color: gainsboro !important;
 }
-.box-2 a,h3,label,p{
+
+.box-2 a,
+h3,
+label,
+p {
   color: white !important;
 }
-
-
-
-
 
 
 .App {
@@ -165,7 +177,48 @@ form > a{
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* css style - category and product */
+
+th,
+td,
+tr {
+  text-align: center !important;
+  color: #333 !important;
+}
+
+.btn-toolbar {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.btn-warning{
+  margin-right: 7px !important;
+}
+.btn-primary {
+  margin-top: 10px !important;
+  background-color: #489FB5 !important;
+  border: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+table {
+  background-color: gainsboro !important;
+}
+.modal-title{
+  color: #333 !important;
+}
+
+.form-label{
+  color: #333 !important;
+  margin-top: 10px !important;
+}
+select,option{
+  color:#333 !important;
 }

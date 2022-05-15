@@ -11,6 +11,8 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Home } from "./components/Home";
 import { Location } from "./components/Location";
+import { Category } from "./components/Category";
+import { Product } from "./components/Product";
 import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
 
@@ -36,6 +38,8 @@ function App() {
                   <Nav.Link className='links' as={Link} to="/about">About</Nav.Link>
                   <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link>
                   <Nav.Link className='links' as={Link} to="/location">Location</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/category">Category</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/product">Product</Nav.Link>
                   <NavDropdown className='links' title="Registration" id="basic-nav-dropdown">
                     <NavDropdown.Item as={Link} to="/login" className="dropdown-item">Login</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
@@ -51,6 +55,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<Home />} />
               <Route path="/location" element={<Location />} />
+              <Route path="/category" element={<Category />} />
+              <Route path="/product" element={<Product />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>

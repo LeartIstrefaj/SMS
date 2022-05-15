@@ -2,21 +2,21 @@ import React,{Component} from 'react';
 import {Table} from 'react-bootstrap';
 
 import {Button,ButtonToolbar} from 'react-bootstrap';
-import {AddCatModal} from './AddCatModal';
-import {EditCatModal} from './EditCatModal';
+import {AddProModal} from '../components/AddProModal';
+import {EditProModal} from '../components/EditProModal';
 
-export class Category extends Component{
+export class Product extends Component{
 
     constructor(props){
         super(props);
-        this.state={cats:[], addModalShow:false, editModalShow:false}
+        this.state={pros:[], addModalShow:false, editModalShow:false}
     }
 
     refreshList(){
-        fetch('http://localhost:36468/api/category')
+        fetch('http://localhost:36468/api/product')
         .then(response=>response.json())
         .then(data=>{
-            this.setState({cats:data});
+            this.setState({pros:data});
         });
     }
 
@@ -28,9 +28,9 @@ export class Category extends Component{
         this.refreshList();
     }
 
-    deleteDep(catid){
+    deleteEmp(proid){
         if(window.confirm('Are you sure?')){
-            fetch('http://localhost:36468/api/category/'+catid,{
+            fetch('http://localhost:36468/api/product/'+proid,{
                 method:'DELETE',
                 header:{'Accept':'application/json',
             'Content-Type':'application/json'}
@@ -38,41 +38,50 @@ export class Category extends Component{
         }
     }
     render(){
-        const {cats, catid,catname}=this.state;
+        const {pros, proid,proname,catmt,photofilename,doj}=this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
         let editModalClose=()=>this.setState({editModalShow:false});
         return(
-            <div >
+            <div className='container'>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>KategoriId</th>
-                        <th>Emri i kategorisë</th>
+                            <th>ProduktiId</th>
+                        <th>Emri i Produktit</th>
+                        <th>Kategoria</th>
+                        <th>Data e skanimit</th>
                         <th>Mundesitë</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {cats.map(cat=>
-                            <tr key={cat.CategoryId}>
-                                <td>{cat.CategoryId}</td>
-                                <td>{cat.CategoryName}</td>
+                        {pros.map(pro=>
+                            <tr key={pro.ProductId}>
+                                <td>{pro.ProductId}</td>
+                                <td>{pro.ProductName}</td>
+                                <td>{pro.Category}</td>
+                                <td>{pro.DateOfJoining}</td>
                                 <td>
 <ButtonToolbar>
     <Button className="mr-2" variant="warning"
     onClick={()=>this.setState({editModalShow:true,
-        catid:cat.CategoryId,catname:cat.CategoryName})}>
+        proid:pro.ProductId,proname:pro.ProductName,catmt:pro.Category,
+        photofilename:pro.PhotoFileName,doj:pro.DateOfJoining})}>
             Edit
         </Button>
 
         <Button className="mr-2" variant="danger"
-    onClick={()=>this.deleteDep(cat.CategoryId)}>
+    onClick={()=>this.deleteEmp(pro.ProductId)}>
             Delete
         </Button>
 
-        <EditCatModal show={this.state.editModalShow}
+        <EditProModal show={this.state.editModalShow}
         onHide={editModalClose}
-        catid={catid}
-        catname={catname}/>
+        proid={proid}
+        proname={proname}
+        catmt={catmt}
+        photofilename={photofilename}
+        doj={doj}
+        />
 </ButtonToolbar>
 
                                 </td>
@@ -85,9 +94,9 @@ export class Category extends Component{
                 <ButtonToolbar>
                     <Button variant='primary'
                     onClick={()=>this.setState({addModalShow:true})}>
-                    Add Category</Button>
+                    Add Product</Button>
 
-                    <AddCatModal show={this.state.addModalShow}
+                    <AddProModal show={this.state.addModalShow}
                     onHide={addModalClose}/>
                 </ButtonToolbar>
             </div>
