@@ -206,6 +206,9 @@ p {
   #bg-forms{
     display: none;
   }
+  #bg-forms-signup{
+    display: none;
+  }
   .forms{
     height: 100%;
     width: 100%;
