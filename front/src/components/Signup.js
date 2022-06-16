@@ -2,52 +2,22 @@ import React from "react";
 
 export const Signup = () => {
   return (
-    <div className="container box-2">
-      <div className="row d-flex justify-content-center">
-        <form className="col-lg-6 col-md-6 col-sm-12">
-          <h3>Sign Up</h3>
+    <div className="container bg-login">
+      <div className="row h-100 d-flex align-items-center justify-content-center">
+        <div className="col-lg-5 col-sm-12">
 
-          <div className="mb-3">
-            <label>First name</label>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="First name"
-            />
-          </div>
+          <h3 className="title">Sign up!</h3>
+          <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your First Name" />
+          <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your Last Name" />
+          <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your Email Address" />
+          <input type="password" className="form-control input text-center mx-auto" placeholder="Enter your Password" />
+          <button className="button">Sign up</button>
 
-          <div className="mb-3">
-            <label>Last name</label>
-            <input type="text" className="form-control" placeholder="Last name" />
-          </div>
+        </div>
 
-          <div className="mb-3">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-            />
-          </div>
-
-          <div className="mb-3">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-            />
-          </div>
-
-          <div className="d-grid">
-            <button type="submit" className="btn btn-success">
-              Sign Up
-            </button>
-          </div>
-          <p className="forgot-password text-right">
-            Already registered <a id="sign-in" href="/sign-in">sign in?</a>
-          </p>
-        </form>
+        <div className="p-0 col-lg-7 col-sm-12">
+          <div id="bg-forms-signup"></div>
+        </div>
       </div>
     </div>
   );
