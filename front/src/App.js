@@ -65,6 +65,7 @@ function App() {
       </div>
 
 
+
       <footer>
         <div className="container">
           <div className="row">
@@ -87,9 +88,8 @@ function App() {
         </div>
 
       </footer>
+
     </BrowserRouter>
-
-
 
     // End Navbar Section
   );

@@ -2,54 +2,21 @@ import React from "react";
 
 export const Login = () => {
   return (
-    <div className="container box-2">
-      <div className="row d-flex justify-content-center align-items-center">
-        <form className="col-lg-6 col-md-6 col-sm-12">
-          <h3>Sign In</h3>
+    <div className="container bg-login">
+      <div className="row h-100 d-flex align-items-center justify-content-center">
+        <div className="col-lg-5 col-sm-12">
 
-          <div className="mb-3">
-            <label>Email address</label>
-            <input
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-            />
-          </div>
+          <h3 className="title">Login Form</h3>
+          <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your Email Address" />
+          <input type="password" className="form-control input text-center mx-auto" placeholder="Enter your Password" />
+          <button className="button">Login</button>
 
-          <div className="mb-3">
-            <label>Password</label>
-            <input
-              type="password"
-              className="form-control"
-              placeholder="Enter password"
-            />
-          </div>
+        </div>
 
-          <div className="mb-3">
-            <div className="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="customCheck1"
-              />
-              <label className="custom-control-label" htmlFor="customCheck1">
-                Remember me
-              </label>
-            </div>
-          </div>
-
-          <div className="d-grid">
-            <button type="submit" className="btn btn-success">
-              Submit
-            </button>
-          </div>
-          <p className="forgot-password text-right">
-            Forgot <a id="sign-in" href="#">password?</a>
-          </p>
-        </form>
+        <div className="p-0 col-lg-7 col-sm-12">
+          <div id="bg-forms"></div>
+        </div>
       </div>
     </div>
-  )
-
-    ;
+  );
 }
