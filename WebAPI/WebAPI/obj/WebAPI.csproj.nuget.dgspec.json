@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\coreAPI\\WebAPI\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\coreAPI\\WebAPI\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\coreAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "D:\\coreAPI\\WebAPI\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Learta\\.nuget\\packages\\",
-        "outputPath": "D:\\coreAPI\\WebAPI\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Learta\\AppData\\Roaming\\NuGet\\NuGet.Config",

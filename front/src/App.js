@@ -1,4 +1,4 @@
-import logo from './img/Logo.png';
+import logoSMS from './img/Logo.png';
 import './App.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import {

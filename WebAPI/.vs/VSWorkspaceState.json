@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WebAPI"
+    "\\WebAPI",
+    "\\WebAPI\\Controllers",
+    "\\WebAPI\\Models"
   ],
+  "SelectedNode": "\\WebAPI.sln",
   "PreviewInSolutionExplorer": false
 }
