@@ -17,7 +17,7 @@ export class EditStokuModal extends Component{
             },
             body:JSON.stringify({
                 StokuId:event.target.StokuId.value,
-                EmriProduktit:event.target. EmriProduktit.value,
+                EmriProduktit:event.target.EmriProduktit.value,
                 SasiaEProduktit:event.target.SasiaEProduktit.value,
                 Vlera:event.target.Vlera.value
 
