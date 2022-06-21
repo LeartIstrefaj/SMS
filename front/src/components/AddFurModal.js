@@ -16,8 +16,8 @@ export class AddFurModal extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                EmriFurnitorit: event.target.EmriFurnitorit.value,
-                QytetiOperimit: event.target.QytetiOperimit.value
+                EmriFurnitorit:event.target.EmriFurnitorit.value,
+                QytetiOperimit:event.target.QytetiOperimit.value
             })
         })
             .then(fur => fur.json())
@@ -54,10 +54,10 @@ export class AddFurModal extends Component {
                                             placeholder="Emri i Furnitorit" />
                                     </Form.Group>
 
-                                    <Form.Group controlId="QytetiOperimit ">
+                                    <Form.Group controlId="QytetiOperimit">
                                         <Form.Label>Qyteti Operimit </Form.Label>
-                                        <Form.Control type="text" name="QytetiOperimit " required
-                                            placeholder="Qyteti Operimit " />
+                                        <Form.Control type="text" name="QytetiOperimit" required
+                                            placeholder="Qyteti Operimit" />
                                     </Form.Group>
 
                                     <Form.Group>
