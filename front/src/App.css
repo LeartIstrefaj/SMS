@@ -5,9 +5,9 @@
   color: #fff !important;
 }
 
-.banner-section {
+.bg-about{
   /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg); */
-   background-color: #003049;
+   background-color: #bde0fe !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -22,20 +22,42 @@
 }
 
 body {
-  background-color: white !important;
+  background-color: #003049 !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100vh;
+  color: white !important;
 
+}
+.pushBottom{
+  margin-top: 10% !important;
+}
+.pushBottom-half{
+  margin-top: 6% !important;
+}
+.rounded-3{
+  border-radius: 20px !important;
 }
 
 #toggle-design {
   color: white !important;
 }
-
+#basic-nav-dropdowns{
+  color: white !important;
+}
+#basic-nav-dropdown{
+  color: black !important;
+}
+.dropdown-toggle{
+  color: white !important;
+}
 .dropdown-item {
   color: black !important;
 }
 
 .dropdown-item:hover {
-  background-color: #b7b7a4 !important;
+  background-color: #bde0fe !important;
 }
 
 .links:hover {
@@ -61,17 +83,17 @@ footer {
 
 footer p,
 strong {
-  color: #333 !important;
+  color: #fff !important;
 }
 
 .icon {
   font-size: 30px;
   padding: 7px;
-  color: #333 !important;
+  color: #b7b7a4 !important;
 }
 
 .icon:hover {
-  color: #b7b7a4 !important;
+  color: #fff !important;
   transition: 1s;
   transform: rotate(360deg);
   /* transform: scale(1.2); */
