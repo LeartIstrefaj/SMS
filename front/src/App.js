@@ -23,6 +23,7 @@ import { Tv} from "./components/Tv";
 import { Phones} from "./components/Phones";
 import { Drink} from "./components/Drink";
 import { Fruit } from "./components/Fruit";
+import { Vegetable } from "./components/Vegetable";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -103,6 +104,7 @@ function App() {
               <Route path="/phone" element={<Phones />} />
               <Route path="/drink" element={<Drink />} />
               <Route path="/fruit" element={<Fruit />} />
+              <Route path="/vegetable" element={<Vegetable />} />
 
             </Routes>
           </div>
