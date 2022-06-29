@@ -9,7 +9,7 @@ namespace WebAPI.Models
     {
         public int DrinkId { get; set; }
         public string DrinkName { get; set; }
-        public string varchar { get; set; }
-        public string type { get; set; }
+        public string Price { get; set; }
+        public string Type { get; set; }
     }
 }

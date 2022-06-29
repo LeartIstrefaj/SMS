@@ -21,6 +21,7 @@ import { Book } from "./components/Book";
 import { Laptop} from "./components/Laptop";
 import { Tv} from "./components/Tv";
 import { Phones} from "./components/Phones";
+import { Drink} from "./components/Drink";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -99,6 +100,7 @@ function App() {
               <Route path="/laptop" element={<Laptop />} />
               <Route path="/tv" element={<Tv />} />
               <Route path="/phone" element={<Phones />} />
+              <Route path="/drink" element={<Drink />} />
 
             </Routes>
           </div>
