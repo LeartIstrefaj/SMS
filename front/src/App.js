@@ -22,6 +22,7 @@ import { Laptop} from "./components/Laptop";
 import { Tv} from "./components/Tv";
 import { Phones} from "./components/Phones";
 import { Drink} from "./components/Drink";
+import { Fruit } from "./components/Fruit";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -101,6 +102,7 @@ function App() {
               <Route path="/tv" element={<Tv />} />
               <Route path="/phone" element={<Phones />} />
               <Route path="/drink" element={<Drink />} />
+              <Route path="/fruit" element={<Fruit />} />
 
             </Routes>
           </div>
