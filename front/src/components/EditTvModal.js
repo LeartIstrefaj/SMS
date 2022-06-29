@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 
-export class AddLaptopModal extends Component {
+export class EditTvModal extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -9,20 +9,21 @@ export class AddLaptopModal extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        fetch('http://localhost:36468/api/loptop', {
-            method: 'POST',
+        fetch('http://localhost:36468/api/tv', {
+            method: 'PUT',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                LoptopName: event.target.LoptopName.value,
+                TvId: event.target.TvId.value,
+                TvName: event.target.TvName.value,
                 SerialKey: event.target.SerialKey.value,
                 Price: event.target.Price.value,
-                Type: event.target.Type.value
+                Type: event.target.Type.value,
             })
         })
-            .then(laptop => laptop.json())
+            .then(tv => tv.json())
             .then((result) => {
                 alert(result);
             },
@@ -42,7 +43,7 @@ export class AddLaptopModal extends Component {
                 >
                     <Modal.Header clooseButton>
                         <Modal.Title id="contained-modal-title-vcenter">
-                            Add Laptops
+                            Edit TVs
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -50,35 +51,45 @@ export class AddLaptopModal extends Component {
                         <Row>
                             <Col sm={6}>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <Form.Group controlId="LoptopName">
-                                        <Form.Label>Laptop Name</Form.Label>
-                                        <Form.Control type="text" name="LoptopName" required
-                                            placeholder="Laptop Name" />
+                                    <Form.Group controlId="TvId">
+                                        <Form.Label>TV ID</Form.Label>
+                                        <Form.Control type="text" name="TvId" required
+                                            disabled
+                                            defaultValue={this.props.tvid}
+                                            placeholder="TV ID" />
+                                    </Form.Group>
+
+                                    <Form.Group controlId="TvName">
+                                        <Form.Label>TV Name</Form.Label>
+                                        <Form.Control type="text" name="TvName" required
+                                            defaultValue={this.props.tvname}
+                                            placeholder="TV Name" />
                                     </Form.Group>
 
                                     <Form.Group controlId="SerialKey">
-                                        <Form.Label>Serial Key </Form.Label>
+                                        <Form.Label>Serial Key</Form.Label>
                                         <Form.Control type="text" name="SerialKey" required
+                                            defaultValue={this.props.serialkey}
                                             placeholder="Serial Key" />
                                     </Form.Group>
 
                                     <Form.Group controlId="Price">
-                                        <Form.Label>Price </Form.Label>
+                                        <Form.Label>Price</Form.Label>
                                         <Form.Control type="text" name="Price" required
+                                            defaultValue={this.props.price}
                                             placeholder="Price" />
                                     </Form.Group>
 
                                     <Form.Group controlId="Type">
-                                        <Form.Label>Type </Form.Label>
+                                        <Form.Label>Type</Form.Label>
                                         <Form.Control type="text" name="Type" required
+                                            defaultValue={this.props.type}
                                             placeholder="Type" />
                                     </Form.Group>
 
-
-
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
-                                            Add Laptops
+                                            Update TVs
                                         </Button>
                                     </Form.Group>
                                 </Form>

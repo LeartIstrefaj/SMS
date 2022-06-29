@@ -19,6 +19,7 @@ import { Furnitori } from "./components/Furnitori";
 import { Stoku } from "./components/Stoku";
 import { Book } from "./components/Book";
 import { Laptop} from "./components/Laptop";
+import { Tv} from "./components/Tv";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,7 +48,7 @@ function App() {
                   <NavDropdown className='links' title="All Departments" id="basic-nav-dropdowns">
                     <NavDropdown.Item as={Link} to="/books" className="dropdown-item">Books</NavDropdown.Item>
                     <NavDropdown className='links' title="Electronics" id="basic-nav-dropdown">
-                      {/* <NavDropdown.Item as={Link} to="/laptop" className="dropdown-item">Laptop</NavDropdown.Item> */}
+                      <NavDropdown.Item as={Link} to="/laptop" className="dropdown-item">Laptop</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to="/tv" className="dropdown-item">TV</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to="/phones" className="dropdown-item">Smart Phones</NavDropdown.Item>
 
@@ -93,6 +94,8 @@ function App() {
               <Route path="/furnitori" element={<Furnitori />} />
               <Route path="/stoku" element={<Stoku />} />
               <Route path="/books" element={<Book />} />
+              <Route path="/laptop" element={<Laptop />} />
+              <Route path="/tv" element={<Tv />} />
 
             </Routes>
           </div>

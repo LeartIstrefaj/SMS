@@ -3,21 +3,21 @@ import { Table } from 'react-bootstrap';
 
 import { Button, ButtonToolbar } from 'react-bootstrap';
 
-import { AddLaptopModal } from '../components/AddLaptopModal';
-import { EditLaptopModal } from '../components/EditLaptopModal';
+import { AddTvModal } from '../components/AddTvModal';
+import { EditTvModal } from '../components/EditTvModal';
 
-export class Laptop extends Component {
+export class Tv extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { laptopp: [], addModalShow: false, editModalShow: false }
+    this.state = { tvv: [], addModalShow: false, editModalShow: false }
   }
 
   refreshList() {
-    fetch('http://localhost:36468/api/loptop')
+    fetch('http://localhost:36468/api/tv')
       .then(response => response.json())
       .then(data => {
-        this.setState({ laptopp: data });
+        this.setState({ tvv: data });
       });
   }
 
@@ -29,9 +29,9 @@ export class Laptop extends Component {
     this.refreshList();
   }
 
-  deleteLaptop(lapid) {
+  deleteTv(tid) {
     if (window.confirm('Are you sure?')) {
-      fetch('http://localhost:36468/api/loptop/' + lapid, {
+      fetch('http://localhost:36468/api/tv/' + tid, {
         method: 'DELETE',
         header: {
           'Accept': 'application/json',
@@ -42,7 +42,7 @@ export class Laptop extends Component {
   }
 
   render() {
-    const { laptopp, laptopid, laptopname, serialkey, price, type } = this.state;
+    const { tvv, tvid, tvname, serialkey, price, type } = this.state;
     let addModalClose = () => this.setState({ addModalShow: false });
     let editModalClose = () => this.setState({ editModalShow: false });
     return (
@@ -52,8 +52,8 @@ export class Laptop extends Component {
         <Table className="mt-4" striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>Laptop ID</th>
-              <th>Laptop Name</th>
+              <th>TV ID</th>
+              <th>TV Name</th>
               <th>Serial Key</th>
               <th>Price</th>
               <th>Type</th>
@@ -61,32 +61,32 @@ export class Laptop extends Component {
             </tr>
           </thead>
           <tbody>
-            {laptopp.map(laptop =>
-              <tr key={laptop.LoptopId}>
-                <td>{laptop.LoptopId}</td>
-                <td>{laptop.LoptopName}</td>
-                <td>{laptop.SerialKey}</td>
-                <td>{laptop.Price}</td>
-                <td>{laptop.Type}</td>
+            {tvv.map(tv =>
+              <tr key={tv.TvId}>
+                <td>{tv.TvId}</td>
+                <td>{tv.TvName}</td>
+                <td>{tv.SerialKey}</td>
+                <td>{tv.Price}</td>
+                <td>{tv.Type}</td>
                 <td>
                   <ButtonToolbar>
                     <Button className="mr-2" variant="warning"
                       onClick={() => this.setState({
                         editModalShow: true,
-                        laptopid: laptop.LoptopId, laptopname: laptop.LoptopName, serialkey: laptop.SerialKey, price: laptop.Price, type: laptop.Type,
+                        tvid: tv.TvId, tvname: tv.TvName, serialkey: tv.SerialKey, price: tv.Price, type: tv.Type,
                       })}>
                       Edit
                     </Button>
 
                     <Button className="mr-2" variant="danger"
-                      onClick={() => this.deleteLaptop(laptop.LoptopId)}>
+                      onClick={() => this.deleteTv(tv.TvId)}>
                       Delete
                     </Button>
 
-                    <EditLaptopModal show={this.state.editModalShow}
+                    <EditTvModal show={this.state.editModalShow}
                       onHide={editModalClose}
-                      laptopid={laptopid}
-                      laptopname={laptopname}
+                      tvid={tvid}
+                      tvname={tvname}
                       serialkey={serialkey}
                       price={price}
                       type={type} />
@@ -102,9 +102,9 @@ export class Laptop extends Component {
         <ButtonToolbar>
           <Button variant='primary'
             onClick={() => this.setState({ addModalShow: true })}>
-            Add Laptops</Button>
+            Add TVs</Button>
 
-          <AddLaptopModal show={this.state.addModalShow}
+          <AddTvModal show={this.state.addModalShow}
             onHide={addModalClose} />
         </ButtonToolbar>
       </div>
@@ -112,4 +112,4 @@ export class Laptop extends Component {
   }
 }
 
-export default Laptop;
+export default Tv;
