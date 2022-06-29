@@ -10,16 +10,15 @@ export class AddVegetableModal extends Component {
     handleSubmit(event) {
         event.preventDefault();
         fetch('http://localhost:36468/api/vegetable', {
-            method: 'PUT',
+            method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                VegetableId: event.target.VegetableId.value,
                 VegetableName: event.target.VegetableName.value,
                 Price: event.target.Price.value,
-                Color: event.target.Color.value,
+                Color: event.target.Color.value
             })
         })
             .then(vegetable => vegetable.json())
@@ -42,7 +41,7 @@ export class AddVegetableModal extends Component {
                 >
                     <Modal.Header clooseButton>
                         <Modal.Title id="contained-modal-title-vcenter">
-                            Edit Vegetables
+                            Add Vegetables
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -50,38 +49,29 @@ export class AddVegetableModal extends Component {
                         <Row>
                             <Col sm={6}>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <Form.Group controlId="VegetableId">
-                                        <Form.Label>Vegetable ID</Form.Label>
-                                        <Form.Control type="text" name="VegetableId" required
-                                            disabled
-                                            defaultValue={this.props.vegetableid}
-                                            placeholder="Vegetable ID" />
-                                    </Form.Group>
-
                                     <Form.Group controlId="VegetableName">
                                         <Form.Label>Vegetable Name</Form.Label>
                                         <Form.Control type="text" name="VegetableName" required
-                                            defaultValue={this.props.vegetablename}
                                             placeholder="Vegetable Name" />
                                     </Form.Group>
 
                                     <Form.Group controlId="Price">
-                                        <Form.Label>Price</Form.Label>
+                                        <Form.Label>Price </Form.Label>
                                         <Form.Control type="text" name="Price" required
-                                            defaultValue={this.props.price}
                                             placeholder="Price" />
                                     </Form.Group>
 
                                     <Form.Group controlId="Color">
-                                        <Form.Label>Color</Form.Label>
+                                        <Form.Label>Color </Form.Label>
                                         <Form.Control type="text" name="Color" required
-                                            defaultValue={this.props.color}
                                             placeholder="Color" />
                                     </Form.Group>
 
+
+
                                     <Form.Group>
                                         <Button variant="primary" type="submit">
-                                            Update Vegetables
+                                            Add Vegetables
                                         </Button>
                                     </Form.Group>
                                 </Form>
