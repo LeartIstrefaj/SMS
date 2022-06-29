@@ -20,10 +20,12 @@ import { Stoku } from "./components/Stoku";
 import { Book } from "./components/Book";
 import { Laptop} from "./components/Laptop";
 import { Tv} from "./components/Tv";
+import { Phones} from "./components/Phones";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+
 
 
 function App() {
@@ -50,7 +52,7 @@ function App() {
                     <NavDropdown className='links' title="Electronics" id="basic-nav-dropdown">
                       <NavDropdown.Item as={Link} to="/laptop" className="dropdown-item">Laptop</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to="/tv" className="dropdown-item">TV</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to="/phones" className="dropdown-item">Smart Phones</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/phone" className="dropdown-item">Smart Phones</NavDropdown.Item>
 
 
                     </NavDropdown>
@@ -96,6 +98,7 @@ function App() {
               <Route path="/books" element={<Book />} />
               <Route path="/laptop" element={<Laptop />} />
               <Route path="/tv" element={<Tv />} />
+              <Route path="/phone" element={<Phones />} />
 
             </Routes>
           </div>
