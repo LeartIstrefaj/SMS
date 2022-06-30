@@ -114,5 +114,68 @@ Price varchar(500),
 Type varchar(500)
 )
 
+create table dbo.Jewerly(
+JewerlyId int identity(1,1),
+JewerlyName varchar(500) NOT NULL,
+Type varchar(500),
+UniqueCode int,
+Price varchar(500)
+);
 
 
+create table dbo.Basketball(
+BasketballId int identity(1,1),
+ProductBasketballName varchar(500) NOT NULL,
+Type varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);
+
+create table dbo.Football(
+FootballId int identity(1,1),
+ProductFootballName varchar(500) NOT NULL,
+Type varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);
+
+create table dbo.Skiing(
+SkiingId int identity(1,1),
+ProductSkiName varchar(500) NOT NULL,
+Type varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);
+
+create table dbo.Men(
+MenId int identity(1,1),
+ProductMenName varchar(500) NOT NULL,
+Type varchar(500),
+Size varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);
+
+create table dbo.Women(
+WomenId int identity(1,1),
+ProductWomenName varchar(500) NOT NULL,
+Type varchar(500),
+Size varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);
+
+create table dbo.Kids(
+KidsId int identity(1,1),
+ProductKidsName varchar(500) NOT NULL,
+Type varchar(500),
+Size varchar(500),
+SerialNumber int,
+Color varchar(500),
+Price varchar(500)
+);

@@ -132,3 +132,11 @@ C:\Users\Admin\Desktop\SMS-v3.1\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.
 C:\Users\Admin\Desktop\SMS-v3.1\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Admin\Desktop\SMS-v3.1\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Admin\Desktop\SMS-v3.1\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Learta\Desktop\SMS\WebAPI\WebAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
