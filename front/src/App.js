@@ -24,6 +24,8 @@ import { Phones} from "./components/Phones";
 import { Drink} from "./components/Drink";
 import { Fruit } from "./components/Fruit";
 import { Vegetable } from "./components/Vegetable";
+import { Jewerly } from "./components/Jewerly";
+import { Basketball } from "./components/Basketball";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -52,6 +54,7 @@ function App() {
                   <Nav.Link className='links' as={Link} to="/product">Product</Nav.Link>
                   <NavDropdown className='links' title="All Departments" id="basic-nav-dropdowns">
                     <NavDropdown.Item as={Link} to="/books" className="dropdown-item">Books</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/jewerlys" className="dropdown-item">Jewerlys</NavDropdown.Item>
                     <NavDropdown className='links' title="Electronics" id="basic-nav-dropdown">
                       <NavDropdown.Item as={Link} to="/laptop" className="dropdown-item">Laptop</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to="/tv" className="dropdown-item">TV</NavDropdown.Item>
@@ -62,8 +65,15 @@ function App() {
 
                     <NavDropdown className='links' title="Grocery" id="basic-nav-dropdown">
                       <NavDropdown.Item as={Link} to="/drink" className="dropdown-item">Drinks</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to="/fruit" className="dropdown-item">Fruit</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/fruit" className="dropdown-item">Fruits</NavDropdown.Item>
                       <NavDropdown.Item as={Link} to="/vegetable" className="dropdown-item">Vegetables</NavDropdown.Item>
+
+                    </NavDropdown>
+
+                    <NavDropdown className='links' title="Sports" id="basic-nav-dropdown">
+                      <NavDropdown.Item as={Link} to="/basketball" className="dropdown-item">Basketball</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/football" className="dropdown-item">Football</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/skiing" className="dropdown-item">Skiing</NavDropdown.Item>
 
                     </NavDropdown>
 
@@ -105,6 +115,8 @@ function App() {
               <Route path="/drink" element={<Drink />} />
               <Route path="/fruit" element={<Fruit />} />
               <Route path="/vegetable" element={<Vegetable />} />
+              <Route path="/jewerlys" element={<Jewerly />} />
+              <Route path="/basketball" element={<Basketball />} />
 
             </Routes>
           </div>
