@@ -1,0 +1,330 @@
+* {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&family=Roboto:wght@300;400;500&display=swap');
+  font-family: 'Montserrat' sans-serif;
+  color: #fff !important;
+}
+
+.bg-about{
+  /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg); */
+   background-color: #bde0fe !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white !important;
+
+}
+
+.home-section {
+  color: #333 !important;
+  font-family: 'Montserrat' sans-serif;
+}
+
+body {
+  background-color: #003049 !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100vh;
+  color: white !important;
+
+}
+.pushBottom{
+  margin-top: 10% !important;
+}
+.pushBottom-half{
+  margin-top: 6% !important;
+}
+.rounded-3{
+  border-radius: 20px !important;
+}
+
+#toggle-design {
+  color: white !important;
+}
+#basic-nav-dropdowns{
+  color: white !important;
+}
+#basic-nav-dropdown{
+  color: black !important;
+}
+.dropdown-toggle{
+  color: white !important;
+}
+.dropdown-item {
+  color: black !important;
+}
+
+.dropdown-item:hover {
+  background-color: #bde0fe !important;
+}
+
+.links:hover {
+  transition: .5s !important;
+  color: #b7b7a4 !important;
+}
+
+.box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.title {
+  font-size: 1rem;
+
+}
+
+footer {
+  width: 100%;
+}
+
+footer p,
+strong {
+  color: #fff !important;
+}
+
+.icon {
+  font-size: 30px;
+  padding: 7px;
+  color: #b7b7a4 !important;
+}
+
+.icon:hover {
+  color: #fff !important;
+  transition: 1s;
+  transform: rotate(360deg);
+  /* transform: scale(1.2); */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+form>a {
+  color: black !important;
+}
+
+.box {
+  width: 60% !important;
+  background-color: gainsboro;
+  border-radius: 10px;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.box a,
+h3,
+label,
+input,
+p {
+  color: black !important;
+}
+
+#sign-in {
+  color: gainsboro !important;
+}
+
+.box-2 a,
+h3,
+label,
+p {
+  color: white !important;
+}
+/* LOGIN  */
+.bg-login{
+  background-color:#bde0fe;
+  height: 80vh;
+  border-radius: 10px;
+}
+.input{
+  padding:10px 25px !important;
+  outline: none !important;
+  border-radius: 10px !important;
+  /* font-size: 15px; */
+  margin-top: 20px !important;
+  width: 80% !important;
+}
+.button{
+  color: #003049 !important;
+  text-transform:uppercase !important;
+  font-size: small !important;
+  font-weight: 600 !important;
+  width: 30% !important;
+  padding:10px 25px !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 20px !important;
+  margin-top: 20px !important;
+}
+.button:hover{
+  background-color: #2a9d8f !important;
+  color: white !important;
+  transition: .5s !important;
+}
+.title{
+  font-size: 35px !important;
+  text-transform: uppercase !important;
+  color: #003049 !important;
+  text-align: center !important;
+}
+
+#bg-forms{
+  width: 100%;
+  height: 80vh;
+  background-image: url(./img/1.jpg);
+  /* background-image: url(./img/market3.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+#bg-forms-signup{
+  width: 100%;
+  height: 80vh;
+  background-image: url(./img/grocery2.jpg);
+  /* background-image: url(./img/market3.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+
+}
+@media screen and (max-width:992px){
+  #bg-forms{
+    display: none;
+  }
+  #bg-forms-signup{
+    display: none;
+  }
+  .forms{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* End Login Form */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* css style - category and product */
+
+th,
+td,
+tr {
+  text-align: center !important;
+  color: #333 !important;
+}
+
+.btn-toolbar {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.btn-warning{
+  margin-right: 7px !important;
+}
+.btn-primary {
+  margin-top: 10px !important;
+  background-color: #489FB5 !important;
+  border: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+table {
+  background-color: gainsboro !important;
+}
+.modal-title{
+  color: #333 !important;
+}
+
+.form-label{
+  color: #333 !important;
+  margin-top: 10px !important;
+}
+select,option{
+  color:#333 !important;
+}
+
+
+/* 404 building */
+.building-info{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

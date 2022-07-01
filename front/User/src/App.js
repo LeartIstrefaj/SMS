@@ -26,6 +26,11 @@ import { Fruit } from "./components/Fruit";
 import { Vegetable } from "./components/Vegetable";
 import { Jewerly } from "./components/Jewerly";
 import { Basketball } from "./components/Basketball";
+import { Football } from "./components/Football";
+import { Skiing } from "./components/Skiing";
+import { Men } from "./components/Men";
+import { Women } from "./components/Women";
+import { Kids } from "./components/Kids";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -77,6 +82,13 @@ function App() {
 
                     </NavDropdown>
 
+                    <NavDropdown className='links' title="Clothing/Shoes" id="basic-nav-dropdown">
+                      <NavDropdown.Item as={Link} to="/men" className="dropdown-item">Men</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/women" className="dropdown-item">Women</NavDropdown.Item>
+                      <NavDropdown.Item as={Link} to="/kids" className="dropdown-item">Kids</NavDropdown.Item>
+
+                    </NavDropdown>
+
                   </NavDropdown>
                   <NavDropdown className='links' title="Others" id="basic-nav-dropdowns">
                     <NavDropdown.Item as={Link} to="/agjenti" className="dropdown-item">Agjenti Shitjes</NavDropdown.Item>
@@ -117,6 +129,11 @@ function App() {
               <Route path="/vegetable" element={<Vegetable />} />
               <Route path="/jewerlys" element={<Jewerly />} />
               <Route path="/basketball" element={<Basketball />} />
+              <Route path="/football" element={<Football />} />
+              <Route path="/skiing" element={<Skiing />} />
+              <Route path="/men" element={<Men />} />
+              <Route path="/women" element={<Women />} />
+              <Route path="/kids" element={<Kids />} />
 
             </Routes>
           </div>
