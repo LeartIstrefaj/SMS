@@ -36,6 +36,7 @@ export class Tv extends Component {
           <thead>
             <tr>
               <th>TV Name</th>
+              <th>Serial Key</th>
               <th>Type</th>
               <th>Price</th>
             </tr>
@@ -44,6 +45,7 @@ export class Tv extends Component {
             {tvv.map(tv =>
               <tr key={tv.TvId}>
                 <td>{tv.TvName}</td>
+                <td>{tv.SerialKey}</td>
                 <td>{tv.Type}</td>
                 <td>{tv.Price}</td>
                 <td>

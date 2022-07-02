@@ -35,6 +35,7 @@ export class Laptop extends Component {
           <thead>
             <tr>
               <th>Laptop Name</th>
+              <th>Serial Key</th>
               <th>Type</th>
               <th>Price</th>
             </tr>
@@ -43,7 +44,8 @@ export class Laptop extends Component {
             {laptopp.map(laptop =>
               <tr key={laptop.LoptopId}>
                 <td>{laptop.LoptopName}</td>
-                <td>{laptop.Type}</td>
+                <td>{laptop.SerialKey}</td>
+                <td>{laptop.Type}</td> 
                 <td>{laptop.Price}</td>
                 <td>
                  
@@ -53,7 +55,7 @@ export class Laptop extends Component {
           </tbody>
 
         </Table>
-        
+
       </div>
     )
   }

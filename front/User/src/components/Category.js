@@ -1,15 +1,11 @@
 import React,{Component} from 'react';
 import {Table} from 'react-bootstrap';
 
-import {Button,ButtonToolbar} from 'react-bootstrap';
-import {AddCatModal} from '../components/AddCatModal';
-import {EditCatModal} from '../components/EditCatModal';
-
 export class Category extends Component{
 
     constructor(props){
         super(props);
-        this.state={cats:[], addModalShow:false, editModalShow:false}
+        this.state={cats:[] }
     }
 
     refreshList(){
@@ -28,52 +24,21 @@ export class Category extends Component{
         this.refreshList();
     }
 
-    deleteDep(catid){
-        if(window.confirm('Are you sure?')){
-            fetch('http://localhost:36468/api/category/'+catid,{
-                method:'DELETE',
-                header:{'Accept':'application/json',
-            'Content-Type':'application/json'}
-            })
-        }
-    }
     render(){
-        const {cats, catid,catname}=this.state;
-        let addModalClose=()=>this.setState({addModalShow:false});
-        let editModalClose=()=>this.setState({editModalShow:false});
+        const {cats}=this.state;
         return(
             <div className='container'>
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>KategoriId</th>
-                        <th>Emri i kategorisë</th>
-                        <th>Mundesitë</th>
+                        <th>Categories</th>
                         </tr>
                     </thead>
                     <tbody>
                         {cats.map(cat=>
                             <tr key={cat.CategoryId}>
-                                <td>{cat.CategoryId}</td>
                                 <td>{cat.CategoryName}</td>
                                 <td>
-<ButtonToolbar>
-    <Button className="mr-2" variant="warning"
-    onClick={()=>this.setState({editModalShow:true,
-        catid:cat.CategoryId,catname:cat.CategoryName})}>
-            Edit
-        </Button>
-
-        <Button className="mr-2" variant="danger"
-    onClick={()=>this.deleteDep(cat.CategoryId)}>
-            Delete
-        </Button>
-
-        <EditCatModal show={this.state.editModalShow}
-        onHide={editModalClose}
-        catid={catid}
-        catname={catname}/>
-</ButtonToolbar>
 
                                 </td>
 
@@ -81,15 +46,6 @@ export class Category extends Component{
                     </tbody>
 
                 </Table>
-
-                <ButtonToolbar>
-                    <Button variant='primary'
-                    onClick={()=>this.setState({addModalShow:true})}>
-                    Add Category</Button>
-
-                    <AddCatModal show={this.state.addModalShow}
-                    onHide={addModalClose}/>
-                </ButtonToolbar>
             </div>
         )
     }

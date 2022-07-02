@@ -7,13 +7,23 @@
 
 .bg-about{
   /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(./img/market2.jpg); */
-   background-color: #bde0fe !important;
+   /* background-color: #bde0fe !important; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: white !important;
+  padding: 25px !important;
 
+}
+.lead{
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  text-align: justify !important;
+}
+.shadow-image-about{
+  box-shadow: #9c9fa0 0px 13px 27px -5px, #9c9fa0 0px 8px 16px -8px !important;
 }
 
 .home-section {

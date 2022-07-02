@@ -14,7 +14,7 @@ import { Category } from "./components/Category";
 import { Product } from "./components/Product";
 import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
-import { Agjenti } from "./components/Agjenti";
+// import { Agjenti } from "./components/Agjenti";
 import { Furnitori } from "./components/Furnitori";
 import { Stoku } from "./components/Stoku";
 import { Book } from "./components/Book";
@@ -91,7 +91,6 @@ function App() {
 
                   </NavDropdown>
                   <NavDropdown className='links' title="Others" id="basic-nav-dropdowns">
-                    <NavDropdown.Item as={Link} to="/agjenti" className="dropdown-item">Agjenti Shitjes</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/furnitori" className="dropdown-item">Furnitori</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/stoku" className="dropdown-item">Stoku</NavDropdown.Item>
 
@@ -117,7 +116,7 @@ function App() {
               <Route path="/product" element={<Product />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/agjenti" element={<Agjenti />} />
+              {/* <Route path="/agjenti" element={<Agjenti />} /> */}
               <Route path="/furnitori" element={<Furnitori />} />
               <Route path="/stoku" element={<Stoku />} />
               <Route path="/books" element={<Book />} />

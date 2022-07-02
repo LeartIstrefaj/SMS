@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 
-
-import { Button, ButtonToolbar } from 'react-bootstrap';
-import { AddStokuModal } from '../components/AddStokuModal';
-import { EditStokuModal } from '../components/EditStokuModal';
-
 export class Stoku extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { stokuu: [], addModalShow: false, editModalShow: false }
+        this.state = { stokuu: [] }
     }
 
     refreshList() {
@@ -29,22 +24,9 @@ export class Stoku extends Component {
         this.refreshList();
     }
 
-    deleteStoku(sid) {
-        if (window.confirm('Are you sure?')) {
-            fetch('http://localhost:36468/api/stoku/' + sid, {
-                method: 'DELETE',
-                header: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-        }
-    }
 
     render() {
-        const { stokuu, stokuid,productname,sasia,vlera } = this.state;
-        let addModalClose = () => this.setState({ addModalShow: false });
-        let editModalClose = () => this.setState({ editModalShow: false });
+        const { stokuu } = this.state;
         return (
             <div className='container'>
                
@@ -53,42 +35,16 @@ export class Stoku extends Component {
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>StokuID</th>
-                            <th>Emri i Produktit</th>
-                            <th>Sasia e Produktit</th>
-                            <th>Vlera</th>
-                            <th>Mundesitë</th>
+                            <th>Product Name</th>
+                            <th>Product Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
                         {stokuu.map(stoku =>
                             <tr key={stoku.StokuId}>
-                                <td>{stoku.StokuId }</td>
                                 <td>{stoku.EmriProduktit }</td>
                                 <td>{stoku.SasiaEProduktit }</td>
-                                <td>{stoku.Vlera}</td>
-                                <td>
-                                    <ButtonToolbar>
-                                        <Button className="mr-2" variant="warning"
-                                            onClick={() => this.setState({
-                                                editModalShow: true,
-                                                stokuid: stoku.StokuId, productname: stoku.EmriProduktit, sasia: stoku.SasiaEProduktit, vlera: stoku.Vlera
-                                            })}>
-                                            Edit
-        </Button>
-
-                                        <Button className="mr-2" variant="danger"
-                                            onClick={() => this.deleteStoku(stoku.StokuId)}>
-                                            Delete
-        </Button>
-
-                                        <EditStokuModal show={this.state.editModalShow}
-                                            onHide={editModalClose}
-                                            stokuid={stokuid}
-                                            productname={productname} 
-                                            sasia={sasia} 
-                                            vlera={vlera}/>
-                                    </ButtonToolbar>
+                                <td>   
 
                                 </td>
 
@@ -96,15 +52,6 @@ export class Stoku extends Component {
                     </tbody>
 
                 </Table>
-
-                <ButtonToolbar>
-                    < Button variant='primary'
-                        onClick={() => this.setState({ addModalShow: true })}>
-                        Shto Stok</Button>
-
-                    <AddStokuModal show={this.state.addModalShow}
-                        onHide={addModalClose} />
-                </ButtonToolbar>
                 
             </div>
         )
