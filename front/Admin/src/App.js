@@ -1,4 +1,4 @@
-
+import logoSMS from './img/Logo.png';
 import './App.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import {
@@ -47,11 +47,11 @@ function App() {
         <section className='banner-section'>
           <Navbar bg="" expand="lg">
             <Container>
-              <Navbar.Brand href="/">Admin Panel</Navbar.Brand>
+              <Navbar.Brand href="/">Admin Panel<sup>MS</sup></Navbar.Brand>
               <Navbar.Toggle id="toggle-design" aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto ">
-                  <Nav.Link className='links' as={Link} to="/">Dashboard</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/">Home</Nav.Link>
                   {/* <Nav.Link className='links' as={Link} to="/about">About</Nav.Link> */}
                   {/* <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link> */}
                   {/* <Nav.Link className='links' as={Link} to="/location">Location</Nav.Link> */}
@@ -111,7 +111,7 @@ function App() {
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/" element={<Home/>} />
+              <Route path="/" element={<Home />} />
               {/* <Route path="/location" element={<Location />} /> */}
               <Route path="/category" element={<Category />} />
               <Route path="/product" element={<Product />} />
@@ -139,6 +139,30 @@ function App() {
           </div>
 
         </section>
+
+
+        <footer>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center ">
+                <div className="social-icon">
+                  <a className='link-footer' id='social-media' href="http://facebook.com/" target="_blank"><i className='icon bx bxl-facebook-circle' ></i></a>
+                  <a className='link-footer' href="https://www.instagram.com/" target="_blank"><i className=' icon bx bxl-instagram'></i></a>
+                  <a className='link-footer' href="https://www.whatsapp.com/" target="_blank"><i className=' icon bx bxl-whatsapp' ></i></a>
+                  <a className='link-footer' href="https://www.linkedin.com/" target="_blank"><i className=' icon bx bxl-linkedin' ></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='container'>
+            <div className='row'>
+              <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
+                <p id="footer-copy"><strong>Team SMS</strong> &copy; 2022 </p>
+              </div>
+            </div>
+          </div>
+
+        </footer>
       </div>
     </BrowserRouter>
 

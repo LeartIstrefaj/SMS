@@ -28,10 +28,11 @@ export class Laptop extends Component {
     const { laptopp } = this.state;
 
     return (
-      <div className='container'>
+      <div className='sections'>
+      <div className='container d-flex justify-content-center'>
         <br />
         <b />
-        <Table className="mt-4" striped bordered hover size="sm">
+        <Table className="mt-4 table-design" striped bordered hover size="sm">
           <thead>
             <tr>
               <th>Laptop Name</th>
@@ -56,6 +57,7 @@ export class Laptop extends Component {
 
         </Table>
 
+      </div>
       </div>
     )
   }

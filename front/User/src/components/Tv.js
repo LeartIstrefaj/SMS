@@ -29,35 +29,37 @@ export class Tv extends Component {
     const { tvv } = this.state;
 
     return (
-      <div className='container'>
-        <br />
-        <b />
-        <Table className="mt-4" striped bordered hover size="sm">
-          <thead>
-            <tr>
-              <th>TV Name</th>
-              <th>Serial Key</th>
-              <th>Type</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tvv.map(tv =>
-              <tr key={tv.TvId}>
-                <td>{tv.TvName}</td>
-                <td>{tv.SerialKey}</td>
-                <td>{tv.Type}</td>
-                <td>{tv.Price}</td>
-                <td>
+      <div className='sections'>
+        <div className='container d-flex justify-content-center'>
+          <br />
+          <b />
+          <Table className="mt-4 table-design" striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>TV Name</th>
+                <th>Serial Key</th>
+                <th>Type</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tvv.map(tv =>
+                <tr key={tv.TvId}>
+                  <td>{tv.TvName}</td>
+                  <td>{tv.SerialKey}</td>
+                  <td>{tv.Type}</td>
+                  <td>{tv.Price}</td>
+                  <td>
 
-                </td>
+                  </td>
 
-              </tr>)}
-          </tbody>
+                </tr>)}
+            </tbody>
 
-        </Table>
+          </Table>
 
-      </div>
+        </div>
+        </div>
     )
   }
 }

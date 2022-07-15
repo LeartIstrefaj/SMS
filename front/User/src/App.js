@@ -8,20 +8,17 @@ import {
   Link
 } from "react-router-dom";
 import { About } from "./components/About";
-import { Contact } from "./components/Contact";
+// import { Contact } from "./components/Contact";
 import { Home } from "./components/Home";
 import { Category } from "./components/Category";
 import { Product } from "./components/Product";
 import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
-// import { Agjenti } from "./components/Agjenti";
-import { Furnitori } from "./components/Furnitori";
-import { Stoku } from "./components/Stoku";
 import { Book } from "./components/Book";
-import { Laptop} from "./components/Laptop";
-import { Tv} from "./components/Tv";
-import { Phones} from "./components/Phones";
-import { Drink} from "./components/Drink";
+import { Laptop } from "./components/Laptop";
+import { Tv } from "./components/Tv";
+import { Phones } from "./components/Phones";
+import { Drink } from "./components/Drink";
 import { Fruit } from "./components/Fruit";
 import { Vegetable } from "./components/Vegetable";
 import { Jewerly } from "./components/Jewerly";
@@ -47,7 +44,7 @@ function App() {
         <section className='banner-section'>
           <Navbar bg="" expand="lg">
             <Container>
-              <Navbar.Brand href="/">Supermarket<sup>MS</sup></Navbar.Brand>
+              <Navbar.Brand href="/">~ Wal Market ~</Navbar.Brand>
               <Navbar.Toggle id="toggle-design" aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto ">
@@ -90,11 +87,6 @@ function App() {
                     </NavDropdown>
 
                   </NavDropdown>
-                  <NavDropdown className='links' title="Others" id="basic-nav-dropdowns">
-                    <NavDropdown.Item as={Link} to="/furnitori" className="dropdown-item">Furnitori</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/stoku" className="dropdown-item">Stoku</NavDropdown.Item>
-
-                  </NavDropdown>
                   <NavDropdown className='links' title="Registration" id="basic-nav-dropdowns">
                     <NavDropdown.Item as={Link} to="/login" className="dropdown-item">Login</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
@@ -109,16 +101,13 @@ function App() {
           <div>
             <Routes>
               <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
+              {/* <Route path="/contact" element={<Contact />} /> */}
               <Route path="/" element={<Home />} />
               {/* <Route path="/location" element={<Location />} /> */}
               <Route path="/category" element={<Category />} />
               <Route path="/product" element={<Product />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              {/* <Route path="/agjenti" element={<Agjenti />} /> */}
-              <Route path="/furnitori" element={<Furnitori />} />
-              <Route path="/stoku" element={<Stoku />} />
               <Route path="/books" element={<Book />} />
               <Route path="/laptop" element={<Laptop />} />
               <Route path="/tv" element={<Tv />} />
@@ -139,8 +128,47 @@ function App() {
 
         </section>
 
+        <section className='section-footer'>
+          <footer className="container">
+            <div className="row pt-5">
+              <div className="col-lg-3 pe-4">
+                <h3 className='mb-3 brand-footer'>Wal Market</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat praesentium quia deserunt amet sit excepturi illum doloremque veritatis possimus! Animi.</p>
+              </div>
+              <div className="col-lg-3 col-md-4 col-sm-12">
+                <h5 className='mb-3 title-footer'>Footer Links</h5>
+                <p><a className='hover-underline footer-link' href='/'>Home</a></p>
+                <p><a className='hover-underline footer-link' href='/about'>About</a></p>
+                <p><a className='hover-underline footer-link' href="/category">Category</a></p>
+                <p><a className='hover-underline footer-link' href="/product">Product</a></p>
+              </div>
 
-        <footer>
+              <div className="col-lg-3 col-md-4 col-sm-12">
+                <h5 className='mb-3 title-footer'>Contact Us</h5>
+                <p><i class='bx bxs-phone contact-icons'></i> +383 49 848 111</p>
+                <p><i class='bx bxs-phone contact-icons'></i> +383 49 125 111</p>
+                <p><i class='bx bx-mail-send contact-icons'></i> info@wal.net</p>
+                <p><i class='bx bxs-map contact-icons'></i> Prishtine Street 14</p>
+              </div>
+
+              <div className="col-lg-3 col-md-4 col-sm-12">
+                <h5 className='mb-3 title-footer'>Social Media</h5>
+                <a className='link-footer' id='social-media' href="https://facebook.com/" target="_blank"><i className='icon bx bxl-facebook-circle' ></i></a>
+                <a className='link-footer' href="https://www.instagram.com/" target="_blank"><i className=' icon bx bxl-instagram'></i></a>
+                <a className='link-footer' href="https://www.whatsapp.com/" target="_blank"><i className=' icon bx bxl-whatsapp' ></i></a>
+                <a className='link-footer' href="https://www.linkedin.com/" target="_blank"><i className=' icon bx bxl-linkedin' ></i></a>
+                <br />
+                <br />
+                <p>Terms and Conditions</p>
+                <p>Privacy and Policy</p>
+              </div>
+                <div className='col-lg-10 pt-3 outline'>
+                <p id="footer-copy">&copy; Designed and Developed <strong>WAL&trade;</strong>  2022 </p>
+                </div>
+            </div>
+          </footer>
+        </section>
+        {/* <footer>
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center ">
@@ -156,12 +184,12 @@ function App() {
           <div className='container'>
             <div className='row'>
               <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-                <p id="footer-copy"><strong>Team SMS</strong> &copy; 2022 </p>
+                <p id="footer-copy"><strong>Team WAL</strong> &copy; 2022 </p>
               </div>
             </div>
           </div>
 
-        </footer>
+        </footer>  */}
       </div>
     </BrowserRouter>
 

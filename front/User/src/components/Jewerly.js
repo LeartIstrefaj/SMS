@@ -27,10 +27,11 @@ export class Jewerly extends Component {
     render() {
         const { jewerlyy } = this.state;
         return (
-            <div className='container'>
+            <div className='sections'>
+            <div className='container d-flex justify-content-center'>
                 <br />
                 <br />
-                <Table className="mt-4" striped bordered hover size="sm">
+                <Table className="mt-4 table-design" striped bordered hover size="sm">
                     <thead>
                         <tr>
                             <th>Jewerly Name</th>
@@ -53,6 +54,7 @@ export class Jewerly extends Component {
 
                 </Table>
 
+            </div>
             </div>
         )
     }

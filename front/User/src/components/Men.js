@@ -27,10 +27,11 @@ export class Men extends Component {
     render() {
         const { menn } = this.state;
         return (
-            <div className='container'>
+            <div className='sections'>
+            <div className='container d-flex justify-content-center'>
                 <br />
                 <br />
-                <Table className="mt-4" striped bordered hover size="sm">
+                <Table className="mt-4 table-design" striped bordered hover size="sm">
                     <thead>
                         <tr>
                             <th>Product Name</th>
@@ -57,6 +58,7 @@ export class Men extends Component {
 
                 </Table>
 
+            </div>
             </div>
         )
     }

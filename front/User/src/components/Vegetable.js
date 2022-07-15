@@ -27,35 +27,37 @@ export class Vegetable extends Component {
     render() {
         const { vegetablee } = this.state;
         return (
-            <div className='container'>
-                <br />
-                <br />
-                <Table className="mt-4" striped bordered hover size="sm">
-                    <thead>
-                        <tr>
-                            <th>Vegetable Name</th>
-                            <th>Color</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {vegetablee.map(vegetable =>
-                            <tr key={vegetable.VegetableId}>
-                                <td>{vegetable.VegetableName}</td>
-                                <td>{vegetable.Color}</td>
-                                <td>{vegetable.Price}</td>
-                                
-                                <td>
-                                    
-                                </td>
+            <div className="sections">
+                <div className='container d-flex justify-content-center'>
+                    <br />
+                    <br />
+                    <Table className="mt-4 table-design" striped bordered hover size="sm">
+                        <thead>
+                            <tr>
+                                <th>Vegetable Name</th>
+                                <th>Color</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {vegetablee.map(vegetable =>
+                                <tr key={vegetable.VegetableId}>
+                                    <td>{vegetable.VegetableName}</td>
+                                    <td>{vegetable.Color}</td>
+                                    <td>{vegetable.Price}</td>
 
-                            </tr>)}
-                    </tbody>
+                                    <td>
 
-                </Table>
-            </div>
-        )
+                                    </td>
+
+                                </tr>)}
+                        </tbody>
+
+                    </Table>
+                </div>
+                </div>
+ )
     }
 }
 
-export default Vegetable;
+                export default Vegetable;

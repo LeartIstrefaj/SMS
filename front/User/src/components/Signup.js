@@ -11,8 +11,9 @@ export const Signup = () => {
           <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your Last Name" />
           <input type="text" className="form-control input text-center mx-auto" placeholder="Enter your Email Address" />
           <input type="password" className="form-control input text-center mx-auto" placeholder="Enter your Password" />
-          <button className="button">Sign up</button>
-
+          <div className="buttoni">
+            <button className="button">Sign up</button>
+          </div>
         </div>
 
         <div className="p-0 col-lg-7 col-sm-12">

@@ -29,33 +29,35 @@ export class Drink extends Component {
     const { drinkk } = this.state;
 
     return (
-      <div className='container'>
-        <br />
-        <b />
-        <Table className="mt-4" striped bordered hover size="sm">
-          <thead>
-            <tr>
-              <th>Drink Name</th>
-              <th>Type</th>
-              <th>Price</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            {drinkk.map(drink =>
-              <tr key={drink.DrinkId}>
-                <td>{drink.DrinkName}</td>
-                <td>{drink.Type}</td>
-                <td>{drink.Price}</td>
-                
-                <td>
-                </td>
+      <div className='sections'>
+        <div className='container d-flex justify-content-center'>
+          <br />
+          <b />
+          <Table className="mt-4 table-design" striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>Drink Name</th>
+                <th>Type</th>
+                <th>Price</th>
 
-              </tr>)}
-          </tbody>
+              </tr>
+            </thead>
+            <tbody>
+              {drinkk.map(drink =>
+                <tr key={drink.DrinkId}>
+                  <td>{drink.DrinkName}</td>
+                  <td>{drink.Type}</td>
+                  <td>{drink.Price}</td>
 
-        </Table>
+                  <td>
+                  </td>
 
+                </tr>)}
+            </tbody>
+
+          </Table>
+
+        </div>
       </div>
     )
   }

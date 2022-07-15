@@ -28,10 +28,11 @@ export class Book extends Component {
   render() {
     const { bookk } = this.state;
     return (
-      <div className='container'>
+      <div className="sections">
+      <div className='container d-flex justify-content-center'>
         <br />
         <b />
-        <Table className="mt-4" striped bordered hover size="sm">
+        <Table className="mt-4 table-design" striped bordered hover size="sm">
           <thead>
             <tr>
               <th>Book Name</th>
@@ -54,6 +55,7 @@ export class Book extends Component {
           </tbody>
 
         </Table>
+      </div>
       </div>
     )
   }

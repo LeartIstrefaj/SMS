@@ -27,36 +27,38 @@ export class Women extends Component {
     render() {
         const { womm } = this.state;
         return (
-            <div className='container'>
-                <br />
-                <br />
-                <Table className="mt-4" striped bordered hover size="sm">
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Type</th>
-                            <th>Size</th>
-                            <th>Color</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {womm.map(wom =>
-                            <tr key={wom.WomenId}>
-                                <td>{wom.ProductWomenName}</td>
-                                <td>{wom.Type}</td>
-                                <td>{wom.Size}</td>
-                                <td>{wom.Color}</td>
-                                <td>{wom.Price}</td>
-                                <td>
+            <div className='sections'>
+                <div className='container d-flex justify-content-center'>
+                    <br />
+                    <br />
+                    <Table className="mt-4 table-design" striped bordered hover size="sm">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Color</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {womm.map(wom =>
+                                <tr key={wom.WomenId}>
+                                    <td>{wom.ProductWomenName}</td>
+                                    <td>{wom.Type}</td>
+                                    <td>{wom.Size}</td>
+                                    <td>{wom.Color}</td>
+                                    <td>{wom.Price}</td>
+                                    <td>
 
-                                </td>
+                                    </td>
 
-                            </tr>)}
-                    </tbody>
+                                </tr>)}
+                        </tbody>
 
-                </Table>
+                    </Table>
 
+                </div>
             </div>
         )
     }

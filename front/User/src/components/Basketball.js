@@ -26,36 +26,38 @@ export class Basketball extends Component {
 
 
     render() {
-        const { bass} = this.state;
+        const { bass } = this.state;
         return (
-            <div className='container'>
-                <br />
-                <br />
-                <Table className="mt-4" striped bordered hover size="sm">
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Type</th>
-                            <th>Color</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {bass.map(bas =>
-                            <tr key={bas.BasketballId}>
-                                <td>{bas.ProductBasketballName}</td>
-                                <td>{bas.Type}</td>
-                                <td>{bas.Color}</td>
-                                <td>{bas.Price}</td>
-                                <td>
+            <div className='sections'>
+                <div className='container d-flex justify-content-center'>
+                    <br />
+                    <br />
+                    <Table className="mt-4 table-design" striped bordered hover size="sm">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Type</th>
+                                <th>Color</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {bass.map(bas =>
+                                <tr key={bas.BasketballId}>
+                                    <td>{bas.ProductBasketballName}</td>
+                                    <td>{bas.Type}</td>
+                                    <td>{bas.Color}</td>
+                                    <td>{bas.Price}</td>
+                                    <td>
 
-                                </td>
+                                    </td>
 
-                            </tr>)}
-                    </tbody>
+                                </tr>)}
+                        </tbody>
 
-                </Table>
+                    </Table>
 
+                </div>
             </div>
         )
     }
