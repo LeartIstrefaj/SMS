@@ -124,5 +124,33 @@ namespace WebAPI.Controllers
                 return new JsonResult("Deleted Successfully");
             }
         }
+
+
+        //Dashboard Category Count
+        [Route("GetAllCountCategory")]
+        public JsonResult GetAllCountCategory()
+        {
+            string query = @"
+                 select COUNT(*) from dbo.Category
+                ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("SMSCon");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader); ;
+
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+            return new JsonResult(table);
+
+        }
     }
 }
+

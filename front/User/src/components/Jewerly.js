@@ -45,10 +45,7 @@ export class Jewerly extends Component {
                                 <td>{jewerly.JewerlyName}</td>
                                 <td>{jewerly.Type}</td>
                                 <td>{jewerly.Price}</td>
-                                <td>
-
-                                </td>
-
+                                
                             </tr>)}
                     </tbody>
 

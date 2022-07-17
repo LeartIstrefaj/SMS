@@ -39,9 +39,7 @@ export class Category extends Component {
                             {cats.map(cat =>
                                 <tr key={cat.CategoryId}>
                                     <td>{cat.CategoryName}</td>
-                                    <td>
-
-                                    </td>
+                                    
 
                                 </tr>)}
                         </tbody>

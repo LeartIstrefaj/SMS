@@ -179,3 +179,5 @@ SerialNumber int,
 Color varchar(500),
 Price varchar(500)
 );
+
+

@@ -49,10 +49,7 @@ export class Women extends Component {
                                     <td>{wom.Size}</td>
                                     <td>{wom.Color}</td>
                                     <td>{wom.Price}</td>
-                                    <td>
-
-                                    </td>
-
+                                    
                                 </tr>)}
                         </tbody>
 

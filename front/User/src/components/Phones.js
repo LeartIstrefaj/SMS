@@ -48,9 +48,6 @@ export class Phones extends Component {
                 <td>{phones.Type}</td>
                 <td>{phones.Price}</td>
                 
-                <td>
-                  
-                </td>
 
               </tr>)}
           </tbody>

@@ -1,4 +1,4 @@
-import logoSMS from './img/Logo.png';
+
 import './App.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import {
@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import { About } from "./components/About";
-import { Contact } from "./components/Contact";
+// import { Contact } from "./components/Contact";
 import { Home } from "./components/Home";
 import { Category } from "./components/Category";
 import { Product } from "./components/Product";
@@ -31,6 +31,7 @@ import { Skiing } from "./components/Skiing";
 import { Men } from "./components/Men";
 import { Women } from "./components/Women";
 import { Kids } from "./components/Kids";
+import { Error} from "./components/Error";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,11 +48,11 @@ function App() {
         <section className='banner-section'>
           <Navbar bg="" expand="lg">
             <Container>
-              <Navbar.Brand href="/">Admin Panel<sup>MS</sup></Navbar.Brand>
+              <Navbar.Brand href="/"><strong>Admin Panel </strong></Navbar.Brand>
               <Navbar.Toggle id="toggle-design" aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto ">
-                  <Nav.Link className='links' as={Link} to="/">Home</Nav.Link>
+                  <Nav.Link className='links' as={Link} to="/">Dashboard</Nav.Link>
                   {/* <Nav.Link className='links' as={Link} to="/about">About</Nav.Link> */}
                   {/* <Nav.Link className='links' as={Link} to="/contact">Contact Us</Nav.Link> */}
                   {/* <Nav.Link className='links' as={Link} to="/location">Location</Nav.Link> */}
@@ -110,8 +111,8 @@ function App() {
           <div>
             <Routes>
               <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/" element={<Home />} />
+              {/* <Route path="/contact" element={<Contact />} /> */}
+              <Route path="/" element={<Home/>} />
               {/* <Route path="/location" element={<Location />} /> */}
               <Route path="/category" element={<Category />} />
               <Route path="/product" element={<Product />} />
@@ -134,36 +135,15 @@ function App() {
               <Route path="/men" element={<Men />} />
               <Route path="/women" element={<Women />} />
               <Route path="/kids" element={<Kids />} />
+              <Route path='*' element={<Error />} />
 
             </Routes>
           </div>
 
         </section>
-
-
-        <footer>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center ">
-                <div className="social-icon">
-                  <a className='link-footer' id='social-media' href="http://facebook.com/" target="_blank"><i className='icon bx bxl-facebook-circle' ></i></a>
-                  <a className='link-footer' href="https://www.instagram.com/" target="_blank"><i className=' icon bx bxl-instagram'></i></a>
-                  <a className='link-footer' href="https://www.whatsapp.com/" target="_blank"><i className=' icon bx bxl-whatsapp' ></i></a>
-                  <a className='link-footer' href="https://www.linkedin.com/" target="_blank"><i className=' icon bx bxl-linkedin' ></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='container'>
-            <div className='row'>
-              <div className="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-                <p id="footer-copy"><strong>Team SMS</strong> &copy; 2022 </p>
-              </div>
-            </div>
-          </div>
-
-        </footer>
+        
       </div>
+      
     </BrowserRouter>
 
     // End Navbar Section

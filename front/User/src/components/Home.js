@@ -268,9 +268,9 @@ export const Home = () => {
                     <div className="col-lg-12 col-md-12 col-sm-12">
                         <h3 className="title text-dark pb-3">Contact!</h3>
                         <form onSubmit={sendEmail}>
-                            <input type="text" className="form-control input input-contact  mx-auto" name="fullname" placeholder="Name:" />
-                            <input type="email" className="form-control input input-contact  mx-auto" name="user_email" placeholder="Email:" />
-                            <textarea class="form-control input input-contact  text-dark mx-auto" name="message" id="exampleFormControlTextarea1" rows="5" placeholder="Message:"></textarea>
+                            <input type="text" className="form-control input input-contact  mx-auto" name="fullname" placeholder="Name:" required />
+                            <input type="email" className="form-control input input-contact  mx-auto" name="user_email" placeholder="Email:"  required />
+                            <textarea class="form-control input input-contact  text-dark mx-auto" name="message" id="exampleFormControlTextarea1" rows="5" placeholder="Message:" required ></textarea>
                             <div className="buttoni">
                                 <input type="submit" className="button button-contact mb-5" value="Send" />
 

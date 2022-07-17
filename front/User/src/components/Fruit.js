@@ -49,9 +49,6 @@ export class Fruit extends Component {
                 <td>{fruit.Color}</td>
                 <td>{fruit.Price}</td>
 
-                <td>
-                </td>
-
               </tr>)}
           </tbody>
 

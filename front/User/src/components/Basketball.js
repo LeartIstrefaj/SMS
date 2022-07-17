@@ -48,9 +48,6 @@ export class Basketball extends Component {
                                     <td>{bas.Type}</td>
                                     <td>{bas.Color}</td>
                                     <td>{bas.Price}</td>
-                                    <td>
-
-                                    </td>
 
                                 </tr>)}
                         </tbody>

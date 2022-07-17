@@ -48,9 +48,6 @@ export class Laptop extends Component {
                 <td>{laptop.SerialKey}</td>
                 <td>{laptop.Type}</td> 
                 <td>{laptop.Price}</td>
-                <td>
-                 
-                </td>
 
               </tr>)}
           </tbody>

@@ -49,9 +49,7 @@ export class Tv extends Component {
                   <td>{tv.SerialKey}</td>
                   <td>{tv.Type}</td>
                   <td>{tv.Price}</td>
-                  <td>
-
-                  </td>
+                  
 
                 </tr>)}
             </tbody>

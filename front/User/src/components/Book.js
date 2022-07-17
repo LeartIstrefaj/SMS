@@ -48,8 +48,6 @@ export class Book extends Component {
                 <td>{book.IsbnCode}</td>
                 <td>{book.Author}</td>
                 <td>{book.Price}</td>
-                <td>
-                </td>
 
               </tr>)}
           </tbody>

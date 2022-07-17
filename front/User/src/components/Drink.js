@@ -49,9 +49,6 @@ export class Drink extends Component {
                   <td>{drink.Type}</td>
                   <td>{drink.Price}</td>
 
-                  <td>
-                  </td>
-
                 </tr>)}
             </tbody>
 

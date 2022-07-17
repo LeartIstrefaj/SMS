@@ -42,10 +42,6 @@ export class Product extends Component {
                                 <tr key={pro.ProductId}>
                                     <td>{pro.ProductName}</td>
                                     <td>{pro.Category}</td>
-                                    <td>
-
-
-                                    </td>
 
                                 </tr>)}
                         </tbody>

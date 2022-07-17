@@ -1,4 +1,4 @@
-import logoSMS from './img/Logo.png';
+import logoWal from './img/logo-wal.png';
 import './App.css';
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import {
@@ -28,6 +28,7 @@ import { Skiing } from "./components/Skiing";
 import { Men } from "./components/Men";
 import { Women } from "./components/Women";
 import { Kids } from "./components/Kids";
+import { Error } from "./components/Error";
 
 // imports other versions bootstraps
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -44,7 +45,9 @@ function App() {
         <section className='banner-section'>
           <Navbar bg="" expand="lg">
             <Container>
-              <Navbar.Brand href="/">~ Wal Market ~</Navbar.Brand>
+              <Navbar.Brand href="/" className="brand-logo">Wal Market
+              <img src={logoWal} alt="" width="40" height="30" className="d-inline-block align-text-top" />
+              </Navbar.Brand>
               <Navbar.Toggle id="toggle-design" aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto ">
@@ -92,6 +95,7 @@ function App() {
                     <NavDropdown.Item as={Link} to="/signup" className="dropdown-item">Sign up</NavDropdown.Item>
 
                   </NavDropdown>
+
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -122,6 +126,7 @@ function App() {
               <Route path="/men" element={<Men />} />
               <Route path="/women" element={<Women />} />
               <Route path="/kids" element={<Kids />} />
+              <Route path="*" element={<Error />} />
 
             </Routes>
           </div>
@@ -162,9 +167,9 @@ function App() {
                 <p>Terms and Conditions</p>
                 <p>Privacy and Policy</p>
               </div>
-                <div className='col-lg-10 pt-3 outline'>
+              <div className='col-lg-10 pt-3 outline'>
                 <p id="footer-copy">&copy; Designed and Developed <strong>WAL&trade;</strong>  2022 </p>
-                </div>
+              </div>
             </div>
           </footer>
         </section>

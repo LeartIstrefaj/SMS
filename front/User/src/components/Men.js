@@ -49,9 +49,7 @@ export class Men extends Component {
                                 <td>{men.Size}</td>
                                 <td>{men.Color}</td>
                                 <td>{men.Price}</td>
-                                <td>
-                                    
-                                </td>
+                                
 
                             </tr>)}
                     </tbody>

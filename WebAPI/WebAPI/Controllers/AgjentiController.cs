@@ -134,7 +134,32 @@ public class AgjentiController : ControllerBase
             return new JsonResult("Deleted Successfully");
         }
     }
-}
+        //Dashboard Agent Count
+        [Route("GetAllCountAgent")]
+        public JsonResult GetAllCountAgent()
+        {
+            string query = @"
+                 select COUNT(*) from dbo.Agjenti
+                ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("SMSCon");
+            SqlDataReader myReader;
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    table.Load(myReader); ;
+
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+            return new JsonResult(table);
+
+        }
+    }
 }
 
 

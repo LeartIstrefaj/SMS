@@ -47,9 +47,7 @@ export class Football extends Component {
                                     <td>{fot.Type}</td>
                                     <td>{fot.Color}</td>
                                     <td>{fot.Price}</td>
-                                    <td>
-
-                                    </td>
+                                    
 
                                 </tr>)}
                         </tbody>

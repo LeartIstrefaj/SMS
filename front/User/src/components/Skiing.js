@@ -48,10 +48,6 @@ export class Skiing extends Component {
                                 <td>{ski.Type}</td>
                                 <td>{ski.Color}</td>
                                 <td>{ski.Price}</td>
-                                <td>
-                                    
-                                </td>
-
                             </tr>)}
                     </tbody>
 
