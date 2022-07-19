@@ -13,23 +13,23 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace WebAPI.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
-    public class SmartPhoneController : Controller
+    public class DrinkController : Controller
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _configuration;
-        public SmartPhoneController(IConfiguration configuration)
+        public DrinkController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
+
 
         [HttpGet]
         public JsonResult Get()
         {
             string query = @"
-                select PhoneId, PhoneName, Imei, Price,Type from dbo.SmartPhone";
+                select DrinkId, DrinkName,Price,Type from dbo.Drinks";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
             SqlDataReader myReader;
@@ -50,14 +50,13 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post(SmartPhone cat)
+        public JsonResult Post(Drink cat)
         {
             string query = @"
-                insert into dbo.SmartPhone
-            (PhoneName,Imei, Price, Type)
+                insert into dbo.Drinks
+            (DrinkName, Price, Type)
                 values
-                ('" + cat.PhoneName + @"'
-                ,'" + cat.Imei + @"'
+                ('" + cat.DrinkName + @"'
                 ,'" + cat.Price + @"'
                 ,'" + cat.Type + @"' )
                 ";
@@ -78,21 +77,19 @@ namespace WebAPI.Controllers
 
                 return new JsonResult("Added Successfully");
             }
-
-
-
-
         }
+
+
+
         [HttpPut]
-        public JsonResult Put(SmartPhone cat)
+        public JsonResult Put(Drink cat)
         {
             string query = @"
-               update dbo.SmartPhone set 
-               PhoneName = '" + cat.PhoneName + @"'
-                ,Imei = '" + cat.Imei + @"'
+               update dbo.Drinks set 
+               DrinkName = '" + cat.DrinkName + @"
                 ,Price = '" + cat.Price + @" '
                 ,Type = '" + cat.Type + @" '
-               where PhoneId = " + cat.PhoneId + @"
+               where LoptopId = " + cat.DrinkId + @"
                ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
@@ -113,12 +110,13 @@ namespace WebAPI.Controllers
             }
         }
 
+
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)
         {
             string query = @"
-               delete from dbo.SmartPhone
-               where PhoneId = " + id + @"
+               delete from dbo.Drinks
+               where DrinksId = " + id + @"
                ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
@@ -137,9 +135,7 @@ namespace WebAPI.Controllers
 
                 return new JsonResult("Deleted Successfully");
             }
+
         }
-
-
-
     }
 }

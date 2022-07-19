@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EYs2BR26NdtlDNjSrvjmVBbsTxqMCV5VPbYlP+ZPXT+I4aMKc2DO8PwhXhRlnA8TMs/0nwacaSygPq4X9QIsJQ==",
+  "dgSpecHash": "M5HP7uurQsg4pbeGGjtt3p/PtDq9W4q9ca3psVcnUnFq7/G6uiiZXILSdQE4mBOXUKjE/luLiWS4InUQYd2cIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Learta\\Desktop\\SMS-1\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Learta\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.20\\microsoft.aspnetcore.authentication.jwtbearer.3.1.20.nupkg.sha512",
     "C:\\Users\\Learta\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.9\\microsoft.aspnetcore.jsonpatch.3.1.9.nupkg.sha512",

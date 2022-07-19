@@ -46,9 +46,9 @@ export class Category extends Component{
                 <Table className="mt-4" striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>KategoriId</th>
-                        <th>Emri i kategorisë</th>
-                        <th>Mundesitë</th>
+                            <th>Category Id</th>
+                        <th>Category Name</th>
+                        <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -1,16 +1,16 @@
 import React,{Component} from 'react';
-import {Modal,Button, Row, Col, Form,Image} from 'react-bootstrap';
+import {Modal,Button, Row, Col, Form} from 'react-bootstrap';
 
 export class AddProModal extends Component{
     constructor(props){
         super(props);
         this.state={cats:[]};
         this.handleSubmit=this.handleSubmit.bind(this);
-        this.handleFileSelected=this.handleFileSelected.bind(this);
+        // this.handleFileSelected=this.handleFileSelected.bind(this);
     }
 
-    photofilename = "anonymous.png";
-    imagesrc = 'http://localhost:36468/api/Photos/'+this.photofilename;
+    // photofilename = "anonymous.png";
+    // imagesrc = 'http://localhost:36468/api/Photos/'+this.photofilename;
 
     componentDidMount(){
         fetch('http://localhost:36468/api/category')
@@ -29,11 +29,11 @@ export class AddProModal extends Component{
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                ProductId:null,
+                // ProductId:null,
                 ProductName:event.target.ProductName.value,
                 Category:event.target.Category.value,
                 DateOfJoining:event.target.DateOfJoining.value,
-                PhotoFileName:this.photofilename
+                // PhotoFileName:this.photofilename
 
             })
         })
@@ -47,29 +47,29 @@ export class AddProModal extends Component{
     }
 
 
-    handleFileSelected(event){
-        event.preventDefault();
-        this.photofilename=event.target.files[0].name;
-        const formData = new FormData();
-        formData.append(
-            "myFile",
-            event.target.files[0],
-            event.target.files[0].name
-        );
+    // handleFileSelected(event){
+    //     event.preventDefault();
+    //     this.photofilename=event.target.files[0].name;
+    //     const formData = new FormData();
+    //     formData.append(
+    //         "myFile",
+    //         event.target.files[0],
+    //         event.target.files[0].name
+    //     );
 
-        fetch('http://localhost:36468/api/product/savefile',{
-            method:'POST',
-            body:formData
-        })
-        .then(res=>res.json())
-        .then((result)=>{
-            this.imagesrc='http://localhost:36468/api/Photos/'+result;
-        },
-        (error)=>{
-            alert('Failed');
-        })
+    //     fetch('http://localhost:36468/api/product/savefile',{
+    //         method:'POST',
+    //         body:formData
+    //     })
+    //     .then(res=>res.json())
+    //     .then((result)=>{
+    //         this.imagesrc='http://localhost:36468/api/Photos/'+result;
+    //     },
+    //     (error)=>{
+    //         alert('Failed');
+    //     })
         
-    }
+    // }
 
     render(){
         return (
@@ -127,10 +127,10 @@ centered
                 </Form>
             </Col>
 
-            <Col sm={6}>
+            {/* <Col sm={6}>
                 <Image width="200px" height="200px" src={this.imagesrc}/>
                 <input onChange={this.handleFileSelected} type="File"/>
-            </Col>
+            </Col> */}
         </Row>
     </Modal.Body>
    

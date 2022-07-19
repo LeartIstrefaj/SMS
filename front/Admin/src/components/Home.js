@@ -31,10 +31,10 @@ export class Home extends Component {
             <div className='sections'>
                 <br/>
                 <br/>
-                <div className='container d-flex justify-content-center'>
-
-                     <div className='col-4'>
-                        <div className='box-admin me-4'>
+                <div className='container'>
+                    <div className='row d-flex'>
+                     <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div className='box-admin me-4 mb-4'>
                             <h4 className='text-dark pt-4'>Categories</h4>
                             {countt.map((count) => (
                                 <p key={count.CategoryId}>{count.CategoryId}</p>
@@ -43,20 +43,20 @@ export class Home extends Component {
 
                         </div>
                    </div>
-                   <div className='col-4'>
-                   <div className='box-admin me-4'>
+                   <div className='col-lg-4 col-md-4 col-sm-12'>
+                   <div className='box-admin me-4 mb-4'>
                             <h4 className='text-dark pt-4'>Products</h4>
                             <p className='p-dashboard'>50</p>
                             {/* <h3 className='text-dark'>Items</h3> */}
                         </div>
                    </div>
-                   <div className='col-4'>
-                   <div className='box-admin me-4'>
+                   <div className='col-lg-4 col-md-4 col-sm-12'>
+                   <div className='box-admin me-4 mb-4'>
                             <h4 className='text-dark pt-4'>Agents</h4>
                             <p className='p-dashboard'>4</p>
                         </div>
                     </div>
-
+                    </div>
                
                 </div>
             </div>

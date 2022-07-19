@@ -9,8 +9,8 @@ export class EditProModal extends Component{
         // this.handleFileSelected=this.handleFileSelected.bind(this);
     }
 
-    photofilename = "anonymous.png";
-    imagesrc = 'http://localhost:36468/api/Photos/'+this.photofilename;
+    // photofilename = "anonymous.png";
+    // imagesrc = 'http://localhost:36468/api/Photos/'+this.photofilename;
 
     componentDidMount(){
         fetch('http://localhost:36468/api/category')
@@ -47,29 +47,29 @@ export class EditProModal extends Component{
     }
 
 
-    handleFileSelected(event){
-        event.preventDefault();
-        this.photofilename=event.target.files[0].name;
-        const formData = new FormData();
-        formData.append(
-            "myFile",
-            event.target.files[0],
-            event.target.files[0].name
-        );
+    // handleFileSelected(event){
+    //     event.preventDefault();
+    //     this.photofilename=event.target.files[0].name;
+    //     const formData = new FormData();
+    //     formData.append(
+    //         "myFile",
+    //         event.target.files[0],
+    //         event.target.files[0].name
+    //     );
 
-        fetch('product/savefile',{
-            method:'POST',
-            body:formData
-        })
-        .then(res=>res.json())
-        .then((result)=>{
-            this.imagesrc='http://localhost:36468/api/Photos/'+result;
-        },
-        (error)=>{
-            alert('Failed');
-        })
+    //     fetch('product/savefile',{
+    //         method:'POST',
+    //         body:formData
+    //     })
+    //     .then(res=>res.json())
+    //     .then((result)=>{
+    //         this.imagesrc='http://localhost:36468/api/Photos/'+result;
+    //     },
+    //     (error)=>{
+    //         alert('Failed');
+    //     })
         
-    }
+    // }
 
     render(){
         return (

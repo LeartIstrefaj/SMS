@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using WebAPI.Models;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace WebAPI.Controllers
 {

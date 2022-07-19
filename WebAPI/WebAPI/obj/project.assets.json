@@ -1015,11 +1015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Learta\\Desktop\\SMS-1\\WebAPI\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\Learta\\Desktop\\SMS-1\\WebAPI\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\Learta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Learta\\Desktop\\SMS\\WebAPI\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\Learta\\Desktop\\SMS-1\\WebAPI\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Learta\\AppData\\Roaming\\NuGet\\NuGet.Config",

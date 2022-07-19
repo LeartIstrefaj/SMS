@@ -20,7 +20,7 @@ export class EditCatModal extends Component{
                 CategoryName:event.target.CategoryName.value
             })
         })
-        .then(res=>res.json())
+        .then(category=>category.json())
         .then((result)=>{
             alert(result);
         },

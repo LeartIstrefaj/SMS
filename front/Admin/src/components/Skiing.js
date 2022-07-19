@@ -81,7 +81,7 @@ export class Skiing extends Component {
                                         </Button>
 
                                         <Button className="mr-2" variant="danger"
-                                            onClick={() => this.deleteFootball(ski.SkiingId)}>
+                                            onClick={() => this.deleteSkiing(ski.SkiingId)}>
                                             Delete
                                         </Button>
 

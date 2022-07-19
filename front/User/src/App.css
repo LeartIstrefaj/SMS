@@ -9,6 +9,7 @@
   /* font-weight: 500; */
   color: #fff !important;
 }
+
 .error{
   height: 70vh;
   display: flex;
@@ -125,8 +126,8 @@ h5{
 
 }
 
-.accordion-header{
-  color: #bde0fe !important;
+.accordion-header > button{
+  color: #fff !important;
 
 }
 
@@ -418,7 +419,7 @@ p {
 }
 .bg-contact {
   background-color: #bde0fe;
-  height: 80vh;
+  height:80vh;
   width:70% !important;
   border-radius: 10px;
 }

@@ -29,9 +29,9 @@ export class Drink extends Component {
     this.refreshList();
   }
 
-  deleteDrink(drid) {
+  deleteDrinks(drid) {
     if (window.confirm('Are you sure?')) {
-      fetch('http://localhost:36468/api/drink/' + drid, {
+      fetch('http://localhost:36468/api/drink/'+drid,{
         method: 'DELETE',
         header: {
           'Accept': 'application/json',
@@ -77,7 +77,7 @@ export class Drink extends Component {
                     </Button>
 
                     <Button className="mr-2" variant="danger"
-                      onClick={() => this.deleteDrink(drink.DrinkId)}>
+                      onClick={() => this.deleteDrinks(drink.DrinkId)}>
                       Delete
                     </Button>
 

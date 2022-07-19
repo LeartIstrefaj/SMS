@@ -11,15 +11,15 @@ import gallery7 from '../img/shoes.jpg';
 import gallery8 from '../img/shoes2.jpg';
 
 export const Home = () => {
-
+    // email -> contact form 
     function sendEmail(e) {
         e.preventDefault();
-
+    
         emailjs.sendForm("service_pmx404e", "template_akjj4ew", e.target, "drL4WuDyywSGUYi2O").then(res => {
             console.log(res);
         }).catch(err => console.log(err));
     }
-
+  
 
     return (
         <div className="">
@@ -29,7 +29,7 @@ export const Home = () => {
                     <div className="col-lg-5 col-md-5 col-sm-12 mt-5">
                         <h4 className="pb-3 display-5 small-design">Wal, is your best friend...</h4>
                         <p className="paragraph-style">Wal Market is one of the stores with the largest reach in the country, region, it works as a self-service that includes the sale of food items, products, drinks, clothing, books, electronics, etc. Wal has a staff of...</p>
-                        <a href="/about"><button className="button toppush me-4">Show more</button></a>
+                        <a href="#contact"><button className="button toppush me-4">Contact Us</button></a>
                         {/* <a href="/contact"><button className="button toppush">Contact Us</button></a> */}
                     </div>
 
@@ -138,7 +138,7 @@ export const Home = () => {
                         <div className="col-lg-6 col-md-6 col-sm-6">
                             <Accordion defaultActiveKey="0" flush>
                                 <Accordion.Item eventKey="0">
-                                    <Accordion.Header>Per cfare eshte krijuar aplikacioni</Accordion.Header>
+                                    <Accordion.Header>What is the application created for?</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -152,7 +152,7 @@ export const Home = () => {
                                 <br />
 
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header>Kush mund ta perdor ate</Accordion.Header>
+                                    <Accordion.Header>Who can use it?</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -165,7 +165,7 @@ export const Home = () => {
                                 </Accordion.Item>
                                 <br />
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header>2</Accordion.Header>
+                                    <Accordion.Header>How many products the application contains</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -178,7 +178,7 @@ export const Home = () => {
                                 </Accordion.Item>
                                 <br />
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header>3</Accordion.Header>
+                                    <Accordion.Header>Who is the sales agent and what does he do?</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -197,7 +197,7 @@ export const Home = () => {
                         <div className="col-lg-6 col-md-6 col-sm-6 topp">
                             <Accordion defaultActiveKey="0" flush>
                                 <Accordion.Item eventKey="3">
-                                    <Accordion.Header>4</Accordion.Header>
+                                    <Accordion.Header>Are there direct purchases on the platform?</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -211,7 +211,7 @@ export const Home = () => {
                                 <br />
 
                                 <Accordion.Item eventKey="1">
-                                    <Accordion.Header>Kush mund ta perdor ate</Accordion.Header>
+                                    <Accordion.Header>How to find the contact form</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -224,7 +224,7 @@ export const Home = () => {
                                 </Accordion.Item>
                                 <br />
                                 <Accordion.Item eventKey="2">
-                                    <Accordion.Header>2</Accordion.Header>
+                                    <Accordion.Header>How long does it take to reply?</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -237,7 +237,7 @@ export const Home = () => {
                                 </Accordion.Item>
                                 <br />
                                 <Accordion.Item className="toppush" eventKey="0">
-                                    <Accordion.Header>3</Accordion.Header>
+                                    <Accordion.Header>More about for Wal</Accordion.Header>
                                     <Accordion.Body>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -261,15 +261,14 @@ export const Home = () => {
                 </div>
 
             </div>
-
             {/* contact -form*/}
-            <div className="container bg-contact p-5">
+            <div className="container bg-contact p-5" id="contact">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12">
-                        <h3 className="title text-dark pb-3">Contact!</h3>
+                        <h3 className="title text-dark pb-3">Contact Us!</h3>
                         <form onSubmit={sendEmail}>
                             <input type="text" className="form-control input input-contact  mx-auto" name="fullname" placeholder="Name:" required />
-                            <input type="email" className="form-control input input-contact  mx-auto" name="user_email" placeholder="Email:"  required />
+                            <input type="email" className="form-control input input-contact  mx-auto" name="user_email" placeholder="Email:" required />
                             <textarea class="form-control input input-contact  text-dark mx-auto" name="message" id="exampleFormControlTextarea1" rows="5" placeholder="Message:" required ></textarea>
                             <div className="buttoni">
                                 <input type="submit" className="button button-contact mb-5" value="Send" />
@@ -277,6 +276,7 @@ export const Home = () => {
                             </div>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>

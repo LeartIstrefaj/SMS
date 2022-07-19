@@ -13,14 +13,13 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace WebAPI.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
-    public class SmartPhoneController : Controller
+    public class FruitController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _configuration;
-        public SmartPhoneController(IConfiguration configuration)
+        public FruitController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -29,7 +28,7 @@ namespace WebAPI.Controllers
         public JsonResult Get()
         {
             string query = @"
-                select PhoneId, PhoneName, Imei, Price,Type from dbo.SmartPhone";
+                select FruitId, FruitName,Price,Color from dbo.Fruits";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
             SqlDataReader myReader;
@@ -50,16 +49,15 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public JsonResult Post(SmartPhone cat)
+        public JsonResult Post(Fruit cat)
         {
             string query = @"
-                insert into dbo.SmartPhone
-            (PhoneName,Imei, Price, Type)
+                insert into dbo.Fruits
+            (FruitName, Price, Color)
                 values
-                ('" + cat.PhoneName + @"'
-                ,'" + cat.Imei + @"'
+                ('" + cat.FruitName + @"'
                 ,'" + cat.Price + @"'
-                ,'" + cat.Type + @"' )
+                ,'" + cat.Color + @"' )
                 ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
@@ -78,21 +76,19 @@ namespace WebAPI.Controllers
 
                 return new JsonResult("Added Successfully");
             }
-
-
-
-
         }
+
+
+
         [HttpPut]
-        public JsonResult Put(SmartPhone cat)
+        public JsonResult Put(Fruit cat)
         {
             string query = @"
-               update dbo.SmartPhone set 
-               PhoneName = '" + cat.PhoneName + @"'
-                ,Imei = '" + cat.Imei + @"'
+               update dbo.Fruits set 
+               FruitName = '" + cat.FruitName + @"'
                 ,Price = '" + cat.Price + @" '
-                ,Type = '" + cat.Type + @" '
-               where PhoneId = " + cat.PhoneId + @"
+                ,Color = '" + cat.Color + @" '
+               where FruitId = " + cat.FruitId + @"
                ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
@@ -117,8 +113,8 @@ namespace WebAPI.Controllers
         public JsonResult Delete(int id)
         {
             string query = @"
-               delete from dbo.SmartPhone
-               where PhoneId = " + id + @"
+               delete from dbo.Fruits
+               where FruitId = " + id + @"
                ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("SMSCon");
@@ -139,7 +135,6 @@ namespace WebAPI.Controllers
             }
         }
 
-
-
     }
+
 }

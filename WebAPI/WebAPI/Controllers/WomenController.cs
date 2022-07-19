@@ -11,7 +11,6 @@ using WebAPI.Models;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-
 namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]

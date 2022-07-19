@@ -92,9 +92,9 @@ function App() {
 
                   </NavDropdown>
                   <NavDropdown className='links' title="Others" id="basic-nav-dropdowns">
-                    <NavDropdown.Item as={Link} to="/agjenti" className="dropdown-item">Agjenti Shitjes</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/furnitori" className="dropdown-item">Furnitori</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/stoku" className="dropdown-item">Stoku</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/agjenti" className="dropdown-item">Sales Agent</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/furnitori" className="dropdown-item">Furnitor</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/stoku" className="dropdown-item">Stock</NavDropdown.Item>
 
                   </NavDropdown>
                   <NavDropdown className='links' title="Registration" id="basic-nav-dropdowns">
