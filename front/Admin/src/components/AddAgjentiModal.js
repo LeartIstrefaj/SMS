@@ -54,15 +54,15 @@ export class AddAgjentiModal extends Component {
                             <Col sm={6} className="mx-auto">
                                 <Form onSubmit={this.handleSubmit}>
                                     <Form.Group controlId="AgjentiName">
-                                        <Form.Label>Agjent Name</Form.Label>
+                                        <Form.Label>Agent Name</Form.Label>
                                         <Form.Control type="text" name="AgjentiName" required
-                                            placeholder="AgjentiName" />
+                                            placeholder="Agent Name" />
                                     </Form.Group>
 
                                     <Form.Group controlId="AgjentiSurname">
-                                        <Form.Label>Agjenti Surname</Form.Label>
+                                        <Form.Label>Agent Surname</Form.Label>
                                         <Form.Control type="text" name="AgjentiSurname" required
-                                            placeholder="AgjentiSurname" />
+                                            placeholder="Agent Surname" />
                                     </Form.Group>
 
                                     <Form.Group controlId="Qyteti">

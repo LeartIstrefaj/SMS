@@ -4,7 +4,16 @@ import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 export class EditDrinkModal extends Component {
     constructor(props) {
         super(props);
+        this.state = { cats: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    // select type
+    componentDidMount() {
+        fetch('http://localhost:36468/api/category')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ cats: data });
+            });
     }
 
     handleSubmit(event) {
@@ -19,7 +28,7 @@ export class EditDrinkModal extends Component {
                 DrinkId: event.target.DrinkId.value,
                 DrinkName: event.target.DrinkName.value,
                 Price: event.target.Price.value,
-                Type: event.target.Type.value,
+                Type: event.target.Type.value
             })
         })
             .then(drink => drink.json())
@@ -42,7 +51,7 @@ export class EditDrinkModal extends Component {
                 >
                     <Modal.Header clooseButton>
                         <Modal.Title className='ms-auto' id="contained-modal-title-vcenter">
-                            Edit Drinks
+                            Edit Drink
                         </Modal.Title>
                         <Button variant="danger" className='ms-auto' onClick={this.props.onHide}>X</Button>
 
@@ -76,9 +85,13 @@ export class EditDrinkModal extends Component {
 
                                     <Form.Group controlId="Type">
                                         <Form.Label>Type</Form.Label>
-                                        <Form.Control type="text" name="Type" required
+                                        {/* <Form.Control type="text" name="Type" required
                                             defaultValue={this.props.type}
-                                            placeholder="Type" />
+                                            placeholder="Type" /> */}
+                                        <Form.Control as="select" defaultValue={this.props.catmt}>
+                                            {this.state.cats.map(cat =>
+                                                <option key={cat.CategoryId}>{cat.CategoryName}</option>)}
+                                        </Form.Control>
                                     </Form.Group>
 
                                     <Form.Group className='d-flex justify-content-center'>

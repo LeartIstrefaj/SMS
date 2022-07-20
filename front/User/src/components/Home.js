@@ -14,12 +14,14 @@ export const Home = () => {
     // email -> contact form 
     function sendEmail(e) {
         e.preventDefault();
-    
-        emailjs.sendForm("service_pmx404e", "template_akjj4ew", e.target, "drL4WuDyywSGUYi2O").then(res => {
-            console.log(res);
-        }).catch(err => console.log(err));
+        if (window.confirm("Do you want to send this message?")) {
+            emailjs.sendForm("service_pmx404e", "template_akjj4ew", e.target, "drL4WuDyywSGUYi2O").then(res => {
+                console.log(res);
+            }).catch(err => console.log(err));
+
+        }
     }
-  
+
 
     return (
         <div className="">
@@ -266,7 +268,7 @@ export const Home = () => {
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12">
                         <h3 className="title text-dark pb-3">Contact Us!</h3>
-                        <form onSubmit={sendEmail}>
+                        <form onSubmit={(sendEmail)}>
                             <input type="text" className="form-control input input-contact  mx-auto" name="fullname" placeholder="Name:" required />
                             <input type="email" className="form-control input input-contact  mx-auto" name="user_email" placeholder="Email:" required />
                             <textarea class="form-control input input-contact  text-dark mx-auto" name="message" id="exampleFormControlTextarea1" rows="5" placeholder="Message:" required ></textarea>

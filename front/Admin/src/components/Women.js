@@ -31,7 +31,7 @@ export class Women extends Component {
 
     deleteWomen(wid) {
         if (window.confirm('Are you sure?')) {
-            fetch('http://localhost:36468/api/men/' + wid, {
+            fetch('http://localhost:36468/api/women/' + wid, {
                 method: 'DELETE',
                 header: {
                     'Accept': 'application/json',

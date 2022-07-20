@@ -4,8 +4,19 @@ import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 export class AddPhonesModal extends Component {
     constructor(props) {
         super(props);
+        this.state = { cats: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    //select type:
+    componentDidMount() {
+        fetch('http://localhost:36468/api/category')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ cats: data });
+            });
+    }
+
 
     handleSubmit(event) {
         event.preventDefault();
@@ -16,10 +27,10 @@ export class AddPhonesModal extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                PhoneName:event.target.PhoneName.value,
-                Imei:event.target.Imei.value,
-                Price:event.target.Price.value,
-                Type:event.target.Type.value
+                PhoneName: event.target.PhoneName.value,
+                Imei: event.target.Imei.value,
+                Price: event.target.Price.value,
+                Type: event.target.Type.value
             })
         })
             .then(phones => phones.json())
@@ -44,7 +55,7 @@ export class AddPhonesModal extends Component {
                         <Modal.Title className='ms-auto' id="contained-modal-title-vcenter">
                             Add Phones
                         </Modal.Title>
-                        <Button variant="danger"  className='ms-auto' onClick={this.props.onHide}>X</Button>
+                        <Button variant="danger" className='ms-auto' onClick={this.props.onHide}>X</Button>
 
                     </Modal.Header>
                     <Modal.Body>
@@ -72,8 +83,12 @@ export class AddPhonesModal extends Component {
 
                                     <Form.Group controlId="Type">
                                         <Form.Label>Type </Form.Label>
-                                        <Form.Control type="text" name="Type" required
-                                            placeholder="Type" />
+                                        {/* <Form.Control type="text" name="Type" required
+                                            placeholder="Type" /> */}
+                                        <Form.Control as="select">
+                                            {this.state.cats.map(cat =>
+                                                <option key={cat.CategoryId}>{cat.CategoryName}</option>)}
+                                        </Form.Control>
                                     </Form.Group>
 
 

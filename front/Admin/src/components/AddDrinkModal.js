@@ -4,7 +4,17 @@ import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 export class AddDrinkModal extends Component {
     constructor(props) {
         super(props);
+        this.state = { cats: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    // !!!!!!!!!!!!!
+    componentDidMount() {
+        fetch('http://localhost:36468/api/category')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ cats: data });
+            });
     }
 
     handleSubmit(event) {
@@ -39,13 +49,13 @@ export class AddDrinkModal extends Component {
                     aria-labelledby="contained-modal-title-vcenter"
                     centered
                 >
-                    <Modal.Header  clooseButton>
+                    <Modal.Header clooseButton>
                         <Modal.Title className='ms-auto' id="contained-modal-title-vcenter">
-                            Add Drinks
+                            Add Drink
                         </Modal.Title>
 
                         <Button variant="danger" className='ms-auto' onClick={this.props.onHide}>X</Button>
-                    
+
                     </Modal.Header>
                     <Modal.Body>
 
@@ -66,8 +76,12 @@ export class AddDrinkModal extends Component {
 
                                     <Form.Group controlId="Type">
                                         <Form.Label>Type </Form.Label>
-                                        <Form.Control type="text" name="Type" required
-                                            placeholder="Type" />
+                                        {/* <Form.Control type="text" name="Type" required
+                                            placeholder="Type" /> */}
+                                        <Form.Control as="select">
+                                            {this.state.cats.map(cat =>
+                                                <option key={cat.CategoryId}>{cat.CategoryName}</option>)}
+                                        </Form.Control>
                                     </Form.Group>
 
 
@@ -82,7 +96,6 @@ export class AddDrinkModal extends Component {
                         </Row>
                     </Modal.Body>
 
-                   
 
                 </Modal>
 

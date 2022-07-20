@@ -58,7 +58,7 @@ export class AddFurModal extends Component {
                                     </Form.Group>
 
                                     <Form.Group controlId="QytetiOperimit">
-                                        <Form.Label>Qyteti Operimit </Form.Label>
+                                        <Form.Label>Operation City </Form.Label>
                                         <Form.Control type="text" name="QytetiOperimit" required
                                             placeholder="Operation City " />
                                     </Form.Group>

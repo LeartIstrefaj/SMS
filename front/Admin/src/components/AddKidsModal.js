@@ -4,7 +4,16 @@ import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 export class AddKidsModal extends Component {
     constructor(props) {
         super(props);
+        this.state = { cats: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    //select type:
+    componentDidMount() {
+        fetch('http://localhost:36468/api/category')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ cats: data });
+            });
     }
 
     handleSubmit(event) {
@@ -44,7 +53,7 @@ export class AddKidsModal extends Component {
                 >
                     <Modal.Header clooseButton>
                         <Modal.Title className='ms-auto' id="contained-modal-title-vcenter">
-                        Add Kids Products
+                            Add Kids Products
                         </Modal.Title>
 
                         <Button variant="danger" className='ms-auto' onClick={this.props.onHide}>X</Button>
@@ -62,8 +71,12 @@ export class AddKidsModal extends Component {
 
                                     <Form.Group controlId="Type">
                                         <Form.Label>Type </Form.Label>
-                                        <Form.Control type="text" name="Type" required
-                                            placeholder="Type" />
+                                        {/* <Form.Control type="text" name="Type" required
+                                            placeholder="Type" /> */}
+                                        <Form.Control as="select">
+                                            {this.state.cats.map(cat =>
+                                                <option key={cat.CategoryId}>{cat.CategoryName}</option>)}
+                                        </Form.Control>
                                     </Form.Group>
 
                                     <Form.Group controlId="Size">
@@ -94,7 +107,7 @@ export class AddKidsModal extends Component {
 
                                     <Form.Group className='d-flex justify-content-center'>
                                         <Button variant="primary" className='rounded-5' type="submit">
-                                        Done
+                                            Done
                                         </Button>
                                     </Form.Group>
                                 </Form>

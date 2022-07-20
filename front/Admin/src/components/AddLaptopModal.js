@@ -4,7 +4,16 @@ import { Modal, Button, Row, Col, Form } from 'react-bootstrap';
 export class AddLaptopModal extends Component {
     constructor(props) {
         super(props);
+        this.state = { cats: [] };
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    // select type:
+    componentDidMount() {
+        fetch('http://localhost:36468/api/category')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ cats: data });
+            });
     }
 
     handleSubmit(event) {
@@ -72,8 +81,12 @@ export class AddLaptopModal extends Component {
 
                                     <Form.Group controlId="Type">
                                         <Form.Label>Type </Form.Label>
-                                        <Form.Control type="text" name="Type" required
-                                            placeholder="Type" />
+                                        {/* <Form.Control type="text" name="Type" required
+                                            placeholder="Type" /> */}
+                                        <Form.Control as="select">
+                                            {this.state.cats.map(cat =>
+                                                <option key={cat.CategoryId}>{cat.CategoryName}</option>)}
+                                        </Form.Control>
                                     </Form.Group>
 
 

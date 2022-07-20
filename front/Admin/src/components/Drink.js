@@ -29,9 +29,9 @@ export class Drink extends Component {
     this.refreshList();
   }
 
-  deleteDrinks(drid) {
+  deleteDrink(drid) {
     if (window.confirm('Are you sure?')) {
-      fetch('http://localhost:36468/api/drink/'+drid,{
+      fetch('http://localhost:36468/api/drink/' + drid, {
         method: 'DELETE',
         header: {
           'Accept': 'application/json',
@@ -48,12 +48,12 @@ export class Drink extends Component {
     return (
       <div className='container'>
         <br />
-        <b />
+        <br />
         <Table className="mt-4" striped bordered hover size="sm">
           <thead>
             <tr>
               <th>Drink ID</th>
-              <th>Drink Name</th>
+              <th>Fruit Name</th>
               <th>Price</th>
               <th>Type</th>
               <th>Options</th>
@@ -71,13 +71,13 @@ export class Drink extends Component {
                     <Button className="mr-2" variant="warning"
                       onClick={() => this.setState({
                         editModalShow: true,
-                        drinkid: drink.DrinkId, drinkname: drink.DrinkName, price: drink.Price, type: drink.Type,
+                        drinkid:drink.DrinkId, drinkname:drink.DrinkName, price:drink.Price, type:drink.Type
                       })}>
                       Edit
                     </Button>
 
                     <Button className="mr-2" variant="danger"
-                      onClick={() => this.deleteDrinks(drink.DrinkId)}>
+                      onClick={() => this.deleteDrink(drink.DrinkId)}>
                       Delete
                     </Button>
 
@@ -99,7 +99,7 @@ export class Drink extends Component {
         <ButtonToolbar>
           <Button variant='primary' className='rounded-5'
             onClick={() => this.setState({ addModalShow: true })}>
-            Add Drinks</Button>
+            Add Drink</Button>
 
           <AddDrinkModal show={this.state.addModalShow}
             onHide={addModalClose} />
